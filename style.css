@@ -62,3 +62,72 @@ ul.menuglowne a {
     text-decoration: none;
     color:  rgb(66, 66, 66);
 }
+
+.wstep {
+    background-color: rgb(233, 247, 255);
+    width: 1000px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    font-size: 20px;
+    color: rgb(85, 85, 85);
+    padding-top: 5px;
+    border-left: 3px solid rgb(78, 186, 248);
+    border-right: 3px solid rgb(78, 186, 248);
+    border-top: 3px solid rgb(78, 186, 248);
+    border-bottom: 5px solid rgb(78, 186, 248);
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(85, 85, 85);
+}
+
+.container {
+    width: 1000px;
+    background-color: rgb(204, 230, 245);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 5px solid rgb(78, 186, 248);
+    border-right: 5px solid rgb(78, 186, 248);
+
+}
+
+.img {
+    display: inline-block;
+    margin-top: 10px;
+   
+    
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    
+}
+
+figcaption {
+
+    margin:0;
+    font-weight: 700;
+    font-size: 20px;
+    color: rgb(85, 85, 85);
+    padding:0
+
+}
+
+.img a{
+    opacity: 0.95;
+}
+
+.img a:hover{
+    opacity: 1;
+}
+
+a:active {
+    text-decoration: none;
+}
