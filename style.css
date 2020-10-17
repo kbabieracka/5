@@ -76,7 +76,7 @@ ul.menuglowne a {
     border-left: 3px solid rgb(78, 186, 248);
     border-right: 3px solid rgb(78, 186, 248);
     border-top: 3px solid rgb(78, 186, 248);
-    border-bottom: 5px solid rgb(78, 186, 248);
+    border-bottom: 3px solid rgb(78, 186, 248);
 }
 
 h1 {
@@ -92,8 +92,9 @@ h1 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    border-left: 5px solid rgb(78, 186, 248);
-    border-right: 5px solid rgb(78, 186, 248);
+    border-left: 3px solid rgb(78, 186, 248);
+    border-right: 3px solid rgb(78, 186, 248);
+    border-bottom: 3px solid rgb(78, 186, 248);
 
 }
 
@@ -126,8 +127,112 @@ figcaption {
 
 .img a:hover{
     opacity: 1;
+    
 }
 
 a:active {
     text-decoration: none;
+}
+
+.contact {
+    width: 1100px;
+    height: 275px;
+    border: 3px solid rgb(10, 164, 253);
+    background-color: rgb(129, 201, 243);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(36, 36, 36);
+    font-size: 19px;
+
+}
+
+.bluebutton {
+    background-color: #1c74b2;
+    padding: 15px;
+    color: rgb(22, 22, 22);
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.bluebutton:hover {
+    background-color: #0f4268;
+    color: rgb(218, 214, 214);
+}
+
+.socials
+{
+	width:100%;
+	text-align: center;
+	background-color: #bde3ff;
+}
+
+.socialdivs
+{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.fb
+{
+	width: 250px;
+	height: 155px;
+	float:left;
+}
+
+.fb:hover
+{
+	background-color: #4668b3;
+}
+
+.yt
+{
+	width: 250px;
+	height: 155px;
+	float:left;
+}
+
+.yt:hover
+{
+	background-color: #d94348;
+}
+
+.tw
+{
+	width: 250px;
+	height: 155px;
+	float:left;
+}
+
+.tw:hover
+{
+	background-color: #3095d3;
+}
+
+.gplus
+{
+	width: 250px;
+	height: 155px;
+	float:left;
+}
+
+.gplus:hover
+{
+	background-color: #d95333;
+}
+
+.info {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 15px;
+    width:100%;
+	text-align: center;
+	background-color: #bde3ff;
 }
