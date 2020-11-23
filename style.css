@@ -1,19 +1,19 @@
 body {
     background-image: url("img/tlo.png");
     font-family: 'Noto Serif', serif;
-    margin: 0;
+    margin: 0 !important;
 }
 
 h1.logo 
 {
-    font-size: 70px;
+    font-size: 60px;
     font-weight: 700;
     text-align: center;
     letter-spacing: 3px;
     color: rgb(85, 85, 85);
     text-transform: uppercase;
     width: 1100px;
-    height: 130px;
+    height: 100px;
     padding-top: 20px;
     background-color: rgb(185, 229, 255);
     margin-left: auto;
@@ -26,57 +26,173 @@ h1.logo
     margin-bottom: 0;
 }
 
-ul.menuglowne {
+.sticky {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+ol.menuglowne {
     list-style-type: none;
-    font-size: 26px;
-    padding: 10px;
-    text-align: center;
+    letter-spacing: 1px;
+    font-size: 28px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 60px;
     font-weight: 700;
     background-color:  rgb(78, 186, 248);
-    width: 1000px;
+    width: 900px;
     height: 40px;
     margin-left: auto;
     margin-right: auto;
     border-left: 3px solid rgb(185, 229, 255);
     border-right: 3px solid rgb(185, 229, 255);
     border-bottom: 3px solid rgb(185, 229, 255); 
-    margin-top: 0;   
-
+    margin-top: 0;  
+    border-radius: 5px;
+    position: relative;
 }
 
-ul.menuglowne > li {
-    display: inline-block;
+ol.wpis {
+    list-style-type: none;
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 60px;
+    font-weight: 700;
+    width: 850px;
+    height: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;  
+    
+}
+
+ol.wpis a {
+    list-style-type: none;
+    text-decoration: none;
+    color: rgb(63, 63, 63);
+}
+
+ol.wpis a:hover {
+    color: rgb(27, 27, 27);
+}
+
+ol.wpis > li:hover {
+    background-color: rgb(122, 199, 243);
+}
+ol.menuglowne > li:hover {
+    background-color:  rgb(46, 161, 228);
+
+}
+ol.menuglowne > li {
+    float: left;
     padding-left: 9px;
     padding-right: 9px;
-    border-left: 1px dashed rgb(85, 85, 85);
+    display: block;
+    border-left: 1px dashed  rgb(18, 79, 114);
+    
+}
+ol.wpis > li {
+    float: left;
+    padding-left: 9px;
+    padding-right: 9px;
+    display: block;
+    background-color: rgb(204, 230, 245);
+    font-size: 20px ;
+    height: 28px;
+    width: 115px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-
-
+    border: 1px solid rgb(85, 85, 85);
+    padding-top: 3px;
+    
 }
-ul.menuglowne > li:last-child 
-{
-    border-right: 1px dashed rgb(85, 85, 85)
+ol.menuglowne > li:last-child 
+{   border-right: 1px dashed  rgb(18, 79, 114);
+    
 }
 
-ul.menuglowne a {
+ol.menuglowne a {
     text-decoration: none;
     color:  rgb(66, 66, 66);
+    
 }
+
+ol.menuglowne a:hover {
+    color:  rgb(42, 42, 42);
+
+}
+
+ol > li > ul {
+    
+    list-style-type: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: -10px;  
+    z-index: 100;
+    font-size: 20px;
+    text-align: center;
+    display: none;
+    width: 116%;
+    
+       
+}
+ol.wpis > li > ul > li {
+     
+    border-top: 1px solid  rgb(66, 66, 66);
+    background-color: rgb(204, 230, 245); }
+    
+
+ol > li > ul > li {
+    background-color:  rgb(78, 186, 248); 
+    border-top: 1px dashed  rgb(66, 66, 66);
+
+    
+}
+ol > li > ul > li:last-child {
+    border-bottom: 1px dashed  rgb(83, 83, 83);
+}
+
+ol > li > ul > li:hover {
+    background-color:  rgb(46, 161, 228);
+    color:  rgb(122, 122, 122);
+}    
+
+ol > li:hover > ul {
+    display: block;
+
+}
+
+
 
 .wstep {
     background-color: rgb(233, 247, 255);
-    width: 1000px;
+    width: 850px;
+    border-radius: 50px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0;
-    font-size: 20px;
+    margin-top: 60px;
+    font-size: 19px;
     color: rgb(85, 85, 85);
     padding-top: 5px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     border-left: 3px solid rgb(78, 186, 248);
     border-right: 3px solid rgb(78, 186, 248);
     border-top: 3px solid rgb(78, 186, 248);
-    border-bottom: 3px solid rgb(78, 186, 248);
+    border-bottom: none;
+}
+
+.wsteptext
+{
+    width: 500px;
 }
 
 h1 {
@@ -84,6 +200,7 @@ h1 {
     text-align: center;
     font-weight: 700;
     color: rgb(85, 85, 85);
+    
 }
 
 .container {
@@ -92,7 +209,7 @@ h1 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    border-top: 3px solid rgb(78, 186, 248);
+    border-top:  4px solid rgb(78, 186, 248);
     border-left: 3px solid rgb(78, 186, 248);
     border-right: 3px solid rgb(78, 186, 248);
     border-bottom: 3px solid rgb(78, 186, 248);
@@ -101,13 +218,50 @@ h1 {
 
 .img {
     display: inline-block;
-    margin-top: 10px;
-   
-    
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border: 3px solid rgb(78, 186, 248);
+    position: relative;
+    width: 400px;
+    height: 280px;
+    overflow: hidden;
+}
+.img img{
+    transition: all 0.5s ease-in-out;
+}
+.img:hover img {
+    transform: scale(1.15);
+}
+
+.img .link {
+    position: absolute;
+    display: block;
+    width: 400px;
+    height: 40px;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    background-color: #05121d;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    color: rgb(204, 230, 245);
+    text-align: center;
+    text-decoration: none;
+    transition: opacity 0.5s ease-in-out;
+    border-top: 3px solid rgb(78, 186, 248);
+}
+
+.img:hover .link {
+    opacity: 0.7;
 }
 
 figure {
     margin: 0;
+    margin-bottom: -5px;
     padding: 0;
     
 }
@@ -122,15 +276,6 @@ figcaption {
 
 }
 
-.img a{
-    opacity: 0.95;
-}
-
-.img a:hover{
-    opacity: 1;
-    
-}
-
 a:active {
     text-decoration: none;
 }
@@ -139,6 +284,7 @@ a:active {
     width: 1100px;
     height: 275px;
     border: 3px solid rgb(10, 164, 253);
+    border-bottom: none;
     background-color: rgb(129, 201, 243);
     margin-left: auto;
     margin-right: auto;
@@ -150,7 +296,7 @@ a:active {
 }
 
 .bluebutton {
-    background-color: #1c74b2;
+    background-color: #218bd6;
     padding: 15px;
     color: rgb(22, 22, 22);
     font-weight: 700;
@@ -162,70 +308,8 @@ a:active {
 }
 
 .bluebutton:hover {
-    background-color: #0f4268;
-    color: rgb(218, 214, 214);
-}
-
-.socials
-{
-	width:100%;
-	text-align: center;
-	background-color: #bde3ff;
-}
-
-.socialdivs
-{
-	width: 1000px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.fb
-{
-	width: 250px;
-	height: 155px;
-	float:left;
-}
-
-.fb:hover
-{
-	background-color: #4668b3;
-}
-
-.yt
-{
-	width: 250px;
-	height: 155px;
-	float:left;
-}
-
-.yt:hover
-{
-	background-color: #d94348;
-}
-
-.tw
-{
-	width: 250px;
-	height: 155px;
-	float:left;
-}
-
-.tw:hover
-{
-	background-color: #3095d3;
-}
-
-.gplus
-{
-	width: 250px;
-	height: 155px;
-	float:left;
-}
-
-.gplus:hover
-{
-	background-color: #d95333;
+    background-color: #225e8b;
+    
 }
 
 .info {
@@ -235,7 +319,8 @@ a:active {
     padding: 15px;
     width:100%;
 	text-align: center;
-	background-color: #bde3ff;
+    background-color: #bde3ff;
+    border-top: 3px solid rgb(78, 186, 248);
 }
 
 .west {
@@ -267,4 +352,75 @@ ul {
 
 .east img{
     margin-top: 15px;
+}
+
+.banner {
+    width: 800px;
+    position: relative;
+    border-right: 3px solid rgb(78, 186, 248);
+    border-left: 3px solid rgb(78, 186, 248);
+    float: left;
+}
+
+.banner .link1 {
+    position: absolute;
+    width:800px;
+    height: 80px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(20, 20, 44);
+    opacity: 0.75;
+    font-size: 33px;
+    padding-bottom: 20px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: rgb(204, 230, 245);
+    text-align: center;
+    text-decoration: none;
+    border-top: 3px solid rgb(78, 186, 248);
+
+}
+
+.container1 {
+    width: 1100px;
+    background-color: rgb(204, 230, 245);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid rgb(78, 186, 248);
+    margin-top: 345px;
+    
+}
+
+.container2 {
+    width: 800px;
+    background-color: rgb(204, 230, 245);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+    
+
+
+h1.logo1 
+{
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 3px;
+    color: rgb(85, 85, 85);
+    text-transform: uppercase;
+    width: 100%;
+    height: 60px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: rgb(185, 229, 255);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    border-left: 3px solid rgb(69, 201, 224);
+    border-right: 3px solid rgb(69, 201, 224);
+    border-top: 3px solid rgb(69, 201, 224);
+    border-bottom: 3px solid rgb(69, 201, 224);
+    margin-bottom: 0;
 }
