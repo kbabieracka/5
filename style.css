@@ -65,7 +65,7 @@ ol.wpis {
     font-weight: 700;
     width: 850px;
     height: 25px;
-    margin-left: auto;
+    margin-left: 330px;
     margin-right: auto;
     margin-top: 0;  
     
@@ -228,6 +228,17 @@ h1 {
     height: 280px;
     overflow: hidden;
 }
+
+.vege img {
+    display: block;
+    transition: all 0.5s ease-in-out;
+}
+
+.vege:hover img {
+    transform: scale(1.25);
+}
+
+
 .img img{
     transition: all 0.5s ease-in-out;
 }
@@ -381,14 +392,20 @@ ul {
 
 }
 
+.sticker1 {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
 .container1 {
-    width: 1100px;
-    background-color: rgb(204, 230, 245);
+    width: 1200px;
+    background-color: rgb(239, 249, 255);
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    border: 3px solid rgb(78, 186, 248);
-    margin-top: 345px;
+    border: 3px solid rgb(185, 229, 255);
+    margin-top: 355px;
     
 }
 
@@ -399,7 +416,11 @@ ul {
     margin-left: auto;
     margin-right: auto;
 }
-    
+
+.container3 {
+    width: 1500px;
+    background-color: #05121d;
+}
 
 
 h1.logo1 

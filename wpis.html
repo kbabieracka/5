@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link rel="stylesheet" href="css/fontello.css" type="text/css" />
 
+    <script src="sorttable.js"></script>
+
     <script src="jquery.js"></script>
     <script src="jquery-3.5.1.min.js"></script>
     <script src="jquery.sticky.js"></script>
@@ -47,49 +49,51 @@
 </head>
 
 <body>
-    <div class="container2">
-        <header>   
-            <div class="banner">
-                <figure>
-                    <a href="#"><img class="banner1" src=img/zywieniewpis.jpg width="800" height="300"></a>
-                    <a href="#" class="link1"><p>Jakie warzywa może jeść kawia domowa?</p></a>
-                </figure>
-            </div>
-        </header>    
+    <div class="container3">
+        <div class="container2">
+            <header>   
+                <div class="banner">
+                    <figure>
+                        <a href="#"><img class="banner1" src=img/zywieniewpis.jpg width="800" height="300"></a>
+                        <a href="#" class="link1"><p>Jakie warzywa może jeść kawia domowa?</p></a>
+                    </figure>
+                </div>
+            </header>    
+        </div>
     </div>
 
-    
-    <nav>
-        <div class="sticker1">
-            <ol class="wpis">
-                <li><a href="#"> Główna</a></li>
-                <li><a href="#">Żywienie</a>
-                    <ul>
-                        <li><a href="#"> Siano </a></li>
-                        <li><a href="#"> Karma</a></li>
-                        <li><a href="#"> Warzywa</a></li>
-                        <li><a href="#"> Owoce</a></li>
-                    </ul>
-                </li>    
-                <li><a href="#">Pielęgnacja</a>
-                    <ul>
-                        <li><a href="#">Stado</a></li>
-                        <li><a href="#"> Klatka</a></li>
-                        <li><a href="#"> Opieka</a></li>
-                    </ul>
-                </li>    
-                <li><a href="#"> Zdrowie</a>
-                    <ul>
-                        <li><a href="#">Choroby</a></li>
-                        <li><a href="#"> Lekarstwa</a></li>
-                        <li><a href="#"> Alergie</a></li>
-                    </ul>
-                </li>    
-                <li><a href="#"> Inne</a></li>
-                <li><a href="#"> Galeria</a></li>
-            </ol>
-        </div>
-    </nav>
+        
+        <nav>
+            <div class="sticker1">
+                <ol class="wpis">
+                    <li><a href="#"> Główna</a></li>
+                    <li><a href="#">Żywienie</a>
+                        <ul>
+                            <li><a href="#"> Siano </a></li>
+                            <li><a href="#"> Karma</a></li>
+                            <li><a href="#"> Warzywa</a></li>
+                            <li><a href="#"> Owoce</a></li>
+                        </ul>
+                    </li>    
+                    <li><a href="#">Pielęgnacja</a>
+                        <ul>
+                            <li><a href="#">Stado</a></li>
+                            <li><a href="#"> Klatka</a></li>
+                            <li><a href="#"> Opieka</a></li>
+                        </ul>
+                    </li>    
+                    <li><a href="#"> Zdrowie</a>
+                        <ul>
+                            <li><a href="#">Choroby</a></li>
+                            <li><a href="#"> Lekarstwa</a></li>
+                            <li><a href="#"> Alergie</a></li>
+                        </ul>
+                    </li>    
+                    <li><a href="#"> Inne</a></li>
+                    <li><a href="#"> Galeria</a></li>
+                </ol>
+            </div>
+        </nav>
  
     
     <main>
@@ -100,19 +104,421 @@
                     <h3>Warzywa, które mogą być pożywieniem dla świniaczków. Wraz z porcjowaniem i opisem składników odżywczych, które dostarczają </h3>
                 </header>
                 <section>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus egestas nisl vitae efficitur. Sed sollicitudin ante in ornare cursus. Praesent imperdiet ex in maximus iaculis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam mattis faucibus dolor. Morbi in vestibulum est, id pharetra dui. Nulla tristique ex eget efficitur egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque vel egestas mauris. Proin varius tortor eleifend orci auctor, in interdum augue vestibulum. Suspendisse vehicula sed orci eu pretium. Praesent ac ipsum venenatis, tempus diam a, tempor tellus. Pellentesque sit amet arcu at augue lobortis lobortis nec quis dolor. Nam ac sollicitudin dolor.
+                    <table class="sortable">
+                        <tr>
+                          <th>Zdjęcie</th>
+                          <th>Warzywo</th>
+                          <th>Kalorie</th>
+                          <th>P<br> (g)</th>
+                          <th>S (g)</th>
+                          <th>Ca (mg)</th>
+                          <th>P (mg)</th>
+                          <th>Wit. C (mg)</th>
+                          <th>Wit. A (mg)</th>
+                          <th>Kwas szczawiowy (mg)</th>
+                          <th>Stosunek Ca:P</th>
+                          <th>Grupa</th>
+                          <th>Komentarz</th>
+                        </tr>
+                        <tr>
+                          <td><div class="vege"><img src="img/karczoch.jpg" alt="karczoch" width="70" height="60"></div></td>
+                          <td>Karczoch</td>
+                          <td>47</td>
+                          <td>3,27</td>
+                          <td>0</td>
+                          <td>44</td>
+                          <td>90</td>
+                          <td>11,7</td>
+                          <td>0</td>
+                          <td>-</td>
+                          <td>0,5:1</td>
+                          <td>B</td>
+                          <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/szparagi.jpg" alt="szparagi" width="70" height="60"></div></td>
+                            <td>Szparagi</td>
+                            <td>20</td>
+                            <td>2,20</td>
+                            <td>1,88</td>
+                            <td>24</td>
+                            <td>52</td>
+                            <td>5,6</td>
+                            <td>38</td>
+                            <td>130</td>
+                            <td>0,5:1</td>
+                            <td>C</td>
+                            <td>-</td>  
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/fasolka.jpg" alt="fasola" width="70" height="60"></div></td>
+                            <td>Fasola</td>
+                            <td>31</td>
+                            <td>1,82</td>
+                            <td>1,40</td>
+                            <td>37</td>
+                            <td>38</td>
+                            <td>16,3</td>
+                            <td>35</td>
+                            <td>360</td>
+                            <td>1,0:1</td>
+                            <td>B</td>
+                            <td>1-2 strączki na świnke</td>
+                            
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/burak.jpg" alt="burak" width="70" height="60"></div></td>
+                            <td>Burak</td>
+                            <td>43</td>
+                            <td>1,61</td>
+                            <td>6,76</td>
+                            <td>16</td>
+                            <td>40</td>
+                            <td>4,9</td>
+                            <td>2</td>
+                            <td>-</td>
+                            <td>0,4:1</td>
+                            <td>C</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/brokul.jpg" alt="brokul" width="70" height="60"></div></td>
+                            <td>Brokuł</td>
+                            <td>34</td>
+                            <td>2,82</td>
+                            <td>1,70</td>
+                            <td>47</td>
+                            <td>66</td>
+                            <td>89,2</td>
+                            <td>33</td>
+                            <td>190</td>
+                            <td>0,7:1</td>
+                            <td>C</td>
+                            <td>bardzo gazotwórczy, tylko małe ilości</td>
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/brukselka.jpg" alt="brukselka" width="70" height="60"></div></td>
+                            <td>Brukselka</td>
+                            <td>43</td>
+                            <td>3,38</td>
+                            <td>2,20</td>
+                            <td>42</td>
+                            <td>69</td>
+                            <td>85</td>
+                            <td>38</td>
+                            <td>360</td>
+                            <td>0,6:1</td>
+                            <td>C</td>
+                            <td>bardzo gazotwórcza, tylko małe ilości</td>
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/kapustabiala.jpg" alt="kapusta biala" width="70" height="60"></div></td>
+                            <td>Kapusta biała</td>
+                            <td>24</td>
+                            <td>1,44</td>
+                            <td>3,58</td>
+                            <td>47</td>
+                            <td>23</td>
+                            <td>32,2</td>
+                            <td>9</td>
+                            <td>100</td>
+                            <td>2,0:1</td>
+                            <td>B</td>
+                            <td>bardzo gazotwórcza, tylko małe ilości</td>
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/kapustaczerwona.jpg" alt="kapusta czerwona" width="70" height="60"></div></td>
+                            <td>Kapusta czerwona</td>
+                            <td>31</td>
+                            <td>1,43</td>
+                            <td>3,91</td>
+                            <td>45</td>
+                            <td>30</td>
+                            <td>57</td>
+                            <td>56</td>
+                            <td>100</td>
+                            <td>1,5:1</td>
+                            <td>B</td>
+                            <td>bardzo gazotwórcza, tylko małe ilości</td>
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/kapustawloska.jpg" alt="kapusta wloska" width="70" height="60"></div></td>
+                            <td>Kapusta włoska</td>
+                            <td>27</td>
+                            <td>2,00</td>
+                            <td>2,27</td>
+                            <td>35</td>
+                            <td>42</td>
+                            <td>31</td>
+                            <td>50</td>
+                            <td>100</td>
+                            <td>0,8:1</td>
+                            <td>B</td>
+                            <td>bardzo gazotwórcza, tylko małe ilości</td>
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/kapustachinska.jpg" alt="kapusta chinska" width="70" height="60"></div></td>
+                            <td>Kapusta chińska</td>
+                            <td>13</td>
+                            <td>1,50</td>
+                            <td>1,18</td>
+                            <td>105</td>
+                            <td>37</td>
+                            <td>45</td>
+                            <td>223</td>
+                            <td>-</td>
+                            <td>2,8:1</td>
+                            <td>C</td>
+                            <td>bardzo gazotwórcza, tylko małe ilości</td>
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/marchew.jpg" alt="marchew" width="70" height="60"></div></td>
+                            <td>Marchew (młoda)</td>
+                            <td>1</td>
+                            <td>0,06</td>
+                            <td>0,48</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>0,8</td>
+                            <td>69</td>
+                            <td>50</td>
+                            <td>1,0:1</td>
+                            <td>A</td>
+                            <td>1 na dzień jest OK</td>
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/kalafior.jpg" alt="kalafior" width="70" height="60"></div></td>
+                            <td>Kalafior</td>
+                            <td>25</td>
+                            <td>1,98</td>
+                            <td>2,40</td>
+                            <td>22</td>
+                            <td>44</td>
+                            <td>46,4</td>
+                            <td>1</td>
+                            <td>150</td>
+                            
+                            <td>0,5:1</td>
+                            <td>C</td>
+                            <td>bardzo gazotwórcza, tylko małe ilości</td>
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/selernaciowy.jpg" alt="seler naciowy" width="70" height="60"></div></td>
+                            <td>Seler naciowy</td>
+                            <td>14</td>
+                            <td>0,69</td>
+                            <td>1,83</td>
+                            <td>40</td>
+                            <td>24</td>
+                            <td>3,1</td>
+                            <td>22</td>
+                            <td>190</td>
+                            <td>1,7:1</td>
+                            <td>B</td>
+                            <td>Potnij w kawałeczki, usuń włókna</td>
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/kukurydza.jpg" alt="kukurydza" width="70" height="60"></div></td>
+                            <td>Kukurydza</td>
+                            <td>77</td>
+                            <td>2,90</td>
+                            <td>2,90</td>
+                            <td>2</td>
+                            <td>80</td>
+                            <td>6,1</td>
+                            <td>9</td>
+                            <td>009</td>
+                            <td>0,3:1</td>
+                            <td>C</td>
+                            <td>mogą być karmione codziennie łuskami i jedwabiem kukurydzy</td>
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/ogorek.jpg" alt="ogorek" width="70" height="60"></div></td>
+                            <td>Ogórek</td>
+                            <td>15</td>
+                            <td>0,65</td>
+                            <td>1,67</td>
+                            <td>16</td>
+                            <td>24</td>
+                            <td>2,8</td>
+                            <td>5</td>
+                            <td>020</td>
+                            <td>0,7:1</td>
+                            <td>B</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/groszek.jpg" alt="groszek" width="70" height="60"></div></td>
+                            <td>Groszek</td>
+                            <td>42</td>
+                            <td>2,80</td>
+                            <td>4,00</td>
+                            <td>43</td>
+                            <td>53</td>
+                            <td>60</td>
+                            <td>54</td>
+                            <td>050</td>
+                            
+                            <td>0,8:1</td>
+                            <td>B</td>
+                            <td>1-2 strączki na świnkę</td>
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/paprykazielona.jpg" alt="papryka zielona" width="70" height="60"></div></td>
+                            <td>Papryka zielona</td>
+                            <td>20</td>
+                            <td>0,86</td>
+                            <td>2,40</td>
+                            <td>10</td>
+                            <td>20</td>
+                            <td>80,4</td>
+                            <td>18</td>
+                            
+                            <td>040</td>
+                            <td>0,5:1</td>
+                            <td>A</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/paprykazolta.jpg" alt="papryka zolta" width="70" height="60"></div></td>
+                            <td>Papryka żółta</td>
+                            <td>27</td>
+                            <td>1,00</td>
+                            <td>-</td>
+                            <td>11</td>
+                            <td>24</td>
+                            <td>183</td>
+                            <td>10</td>
+                            <td>0,40</td>
+                            <td>0,5:1</td>
+                            <td>A</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/paprykaczerwona.jpg" alt="papryka czerwona" width="70" height="60"></div></td>
+                            <td>Papryka czerwona</td>
+                            <td>26</td>
+                            <td>0,99</td>
+                            <td>4,20</td>
+                            <td>7</td>
+                            <td>26</td>
+                            <td>190</td>
+                            <td>157</td>
+                            <td>040</td>
+                            <td>0,3:1</td>
+                            <td>B</td>
+                            <td>wysoka zawartość cukru</td>
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/dynia.jpg" alt="dynia" width="70" height="60"></div></td>
+                            <td>Dynia</td>
+                            <td>26</td>
+                            <td>1,00</td>
+                            <td>1,36</td>
+                            <td>21</td>
+                            <td>44</td>
+                            <td>9</td>
+                            <td>369</td>
+                            <td>-</td>
+                            <td>0,5:1</td>
+                            <td>C</td>
+                            <td>nie karm świnek pestkami</td>
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/cykoria.jpg" alt="cykoria" width="70" height="60"></div></td>
+                            <td>Cykoria sałatowa</td>
+                            <td>23</td>
+                            <td>1,43</td>
+                            <td>0,60</td>
+                            <td>19</td>
+                            <td>40</td>
+                            <td>8</td>
+                            <td>1</td>
+                            <td>-</td>
+                            <td>0,5:1</td>
+                            <td>A</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/zodkiewka.jpg" alt="zodkiewka" width="70" height="60"></div></td>
+                            <td>Rzodkiewka</td>
+                            <td>16</td>
+                            <td>0,68</td>
+                            <td>2,12</td>
+                            <td>25</td>
+                            <td>20</td>
+                            <td>14,8</td>
+                            <td>0</td>
+                            <td>480</td>
+                            <td>1,3:1</td>
+                            <td>B</td>
+                            <td>wysoka zawartość szczawianów</td>
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/batat.jpg" alt="batat" width="70" height="60"></div></td>
+                            <td>Batat</td>
+                            <td>86</td>
+                            <td>1,57</td>
+                            <td>4,18</td>
+                            <td>30</td>
+                            <td>47</td>
+                            <td>2,4</td>
+                            <td>709</td>
+                            <td>240</td>
+                            <td>0,6:1</td>
+                            <td>D</td>
+                            <td>wysoka zawartość cukru i szczawianów</td>
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/pomidor.jpg" alt="pomidor" width="70" height="60"></div></td>
+                            <td>Pomidor</td>
+                            <td>18</td>
+                            <td>0,88</td>
+                            <td>2,63</td>
+                            <td>10</td>
+                            <td>24</td>
+                            <td>12,7</td>
+                            <td>42</td>
+                            <td>-</td>
+                            <td>0,4:1</td>
+                            <td>B</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/rzepa.jpg" alt="rzepa" width="70" height="60"></div></td>
+                            <td>Rzepa</td>
+                            <td>28</td>
+                            <td>0,90</td>
+                            <td>3,80</td>
+                            <td>30</td>
+                            <td>27</td>
+                            <td>21</td>
+                            <td>0</td>
+                            <td>210</td>
+                            
+                            <td>1,1:1</td>
+                            <td>C</td>
+                            <td>wysoka zawartość cukru i szczawianów</td>
+                        </tr>
+                        <tr>
+                            <td><div class="vege"><img src="img/cukinia.jpg" alt="cukinia" width="70" height="60"></div></td>
+                            <td>Cukinia</td>
+                            <td>16</td>
+                            <td>1,21</td>
+                            <td>1,73</td>
+                            <td>15</td>
+                            <td>38</td>
+                            <td>17</td>
+                            <td>10</td>
+                            <td>020</td>
+                            <td>0,4:1</td>
+                            <td>A</td>
+                            <td>-</td>
+                        </tr>
 
-                    Integer sed fringilla erat. Vivamus dolor nunc, condimentum sed accumsan faucibus, ullamcorper nec justo. Duis vel felis in dolor tincidunt venenatis. Suspendisse potenti. Pellentesque sodales faucibus tempor. Maecenas lacus ante, ullamcorper a tristique et, mollis quis elit. Vestibulum viverra quis diam in congue. Mauris porttitor, neque at accumsan vestibulum, erat elit eleifend enim, at ultricies velit nibh vel dolor. Aliquam ullamcorper luctus suscipit. Phasellus a luctus urna. Pellentesque semper bibendum elit id accumsan.
 
-                    Nullam imperdiet nulla eget leo ullamcorper, efficitur bibendum purus feugiat. Sed sagittis augue non elit egestas pretium. Nullam quam est, volutpat non elementum vel, tempor eu leo. Duis eleifend venenatis est. Donec tincidunt eleifend elit, at finibus dolor condimentum ac. In hac habitasse platea dictumst. Vivamus ornare ex vel nulla mollis accumsan. Maecenas massa elit, placerat vitae ornare in, rutrum sit amet nulla. Curabitur imperdiet et nulla vel interdum. Proin diam ante, congue sed posuere vel, semper in nulla. Donec euismod iaculis dolor a lacinia. Ut venenatis mi id lacinia scelerisque.
-
-                    Interdum et malesuada fames ac ante ipsum primis Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus egestas nisl vitae efficitur. Sed sollicitudin ante in ornare cursus. Praesent imperdiet ex in maximus iaculis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam mattis faucibus dolor. Morbi in vestibulum est, id pharetra dui. Nulla tristique ex eget efficitur egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque vel egestas mauris. Proin varius tortor eleifend orci auctor, in interdum augue vestibulum. Suspendisse vehicula sed orci eu pretium. Praesent ac ipsum venenatis, tempus diam a, tempor tellus. Pellentesque sit amet arcu at augue lobortis lobortis nec quis dolor. Nam ac sollicitudin dolor.
-
-                    Integer sed fringilla erat. Vivamus dolor nunc, condimentum sed accumsan faucibus, ullamcorper nec justo. Duis vel felis in dolor tincidunt venenatis. Suspendisse potenti. Pellentesque sodales faucibus tempor. Maecenas lacus ante, ullamcorper a tristique et, mollis quis elit. Vestibulum viverra quis diam in congue. Mauris porttitor, neque at accumsan vestibulum, erat elit eleifend enim, at ultricies velit nibh vel dolor. Aliquam ullamcorper luctus suscipit. Phasellus a luctus urna. Pellentesque semper bibendum elit id accumsan.
-
-                    Nullam imperdiet nulla eget leo ullamcorper, efficitur bibendum purus feugiat. Sed sagittis augue non elit egestas pretium. Nullam quam est, volutpat non elementum vel, tempor eu leo. Duis eleifend venenatis est. Donec tincidunt eleifend elit, at finibus dolor condimentum ac. In hac habitasse platea dictumst. Vivamus ornare ex vel nulla mollis accumsan. Maecenas massa elit, placerat vitae ornare in, rutrum sit amet nulla. Curabitur imperdiet et nulla vel interdum. Proin diam ante, congue sed posuere vel, semper in nulla. Donec euismod iaculis dolor a lacinia. Ut venenatis mi id lacinia scelerisque.
-
-                    Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus non dolor ac nisl sodain faucibus. Phasellus non dolor ac nisl sodales pellentesque vel in risus. Donec ut massa nisl.
+                      </table>
+                   
                 </section>
             </article>
         </div>
