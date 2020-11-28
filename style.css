@@ -65,7 +65,7 @@ ol.wpis {
     font-weight: 700;
     width: 850px;
     height: 25px;
-    margin-left: 330px;
+    margin-left: auto;
     margin-right: auto;
     margin-top: 0;  
     
@@ -235,7 +235,7 @@ h1 {
 }
 
 .vege:hover img {
-    transform: scale(1.25);
+    transform: scale(1.5);
 }
 
 
@@ -370,7 +370,8 @@ ul {
     position: relative;
     border-right: 3px solid rgb(78, 186, 248);
     border-left: 3px solid rgb(78, 186, 248);
-    float: left;
+    margin-bottom: 0;
+    border-bottom: 3px solid rgb(78, 186, 248);
 }
 
 .banner .link1 {
@@ -392,11 +393,6 @@ ul {
 
 }
 
-.sticker1 {
-    margin-left: auto;
-    margin-right: auto;
-
-}
 
 .container1 {
     width: 1200px;
@@ -405,7 +401,7 @@ ul {
     margin-left: auto;
     margin-right: auto;
     border: 3px solid rgb(185, 229, 255);
-    margin-top: 355px;
+    margin-top: 70px;
     
 }
 
@@ -419,7 +415,14 @@ ul {
 
 .container3 {
     width: 1500px;
-    background-color: #05121d;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sticker1 {
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 
@@ -444,4 +447,60 @@ h1.logo1
     border-top: 3px solid rgb(69, 201, 224);
     border-bottom: 3px solid rgb(69, 201, 224);
     margin-bottom: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    border: 2px solid #05121d; 
+    background-color: #68b4f6;
+}
+
+tr, td:first-child {
+    border-left:none;
+}
+
+tr, td:last-child {
+    border-right:none;
+}
+
+tr, td {
+    border: 1px solid #05121d;
+    min-width: 50px;
+}
+
+.tresc {
+    text-align: justify;
+    padding: 30px;
+}
+
+.tresc h2 {
+    font-size: 20px;
+    
+}
+
+.imgwpis {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rebeccapurple;
+    width: 1000px;
+    height: 300px;
+}
+.trescleft {
+    text-align: justify;
+    padding: 30px;
+    float:left;
+}
+
+
+.imgleft {
+    float: left;
+    width: 200px;
+    height: 250px;
+    border: 1px solid rebeccapurple;
+    margin-left: 100px;
+    margin-top: 25px;
+
 }
