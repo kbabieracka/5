@@ -19,30 +19,33 @@
     <script src="jquery.js"></script>
     <script src="jquery-3.5.1.min.js"></script>
     <script src="jquery.sticky.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src= "jquery.scrollTo.min.js"></script>
 
     <script>
+        jQuery(function($)
+        {
+            $.scrollTo(0);
 
-        $(document).ready(function() {
-        var NavY = $('.sticker188').offset().top;
-         
-        var stickyNav = function(){
-        var ScrollY = $(window).scrollTop();
-              
-        if (ScrollY > NavY) { 
-            $('.sticker1').addClass('sticky');
-        } else {
-            $('.sticker1').removeClass('sticky'); 
+            $('#link1').click(function() { $.scrollTo($('#warzywa1'), 500); });
+            $('#link2').click(function() { $.scrollTo($('#warzywa2'), 500); });
+            $('#link3').click(function() { $.scrollTo($('#warzywa3'), 500); });
+            $('#link4').click(function() { $.scrollTo($('#warzywa4'), 500); });
+            $('#link5').click(function() { $.scrollTo($('#warzywa5'), 500); });
+
         }
-        };
-         
-        stickyNav();
-         
-        $(window).scroll(function() {
-            stickyNav();
-        });
-        });
-        
+        );
+
+        $(window).scroll(function()
+        {
+            if($(this).scrollTop()>300) $('.scrollup').fadeIn();
+            else $('.scrollup').fadeOut();
+        }
+        );
     </script>
+
     
 
 
@@ -53,6 +56,7 @@
         <div class="container2">
             <header>   
                 <div class="banner">
+                    <a href="#" class="scrollup"></a>
                     <figure>
                         <a href="#"><img class="banner1" src=img/zywieniewpis.jpg width="800" height="300"></a>
                         <a href="#" class="link1"><p>Jakie warzywa może jeść kawia domowa?</p></a>
@@ -625,9 +629,9 @@
                         <div class="pytanieleft" id="warzywa5">
                         <h2> Czego kategorycznie nie powinna jeść świnka morska?</h2>  
                         </div>
-                        <ul>
+                        <ul class="zwyklalista">
                             <li>WSZYSTKIEGO CZEGO NIE JESTEŚ PEWIEN!</li>
-                            <li>czosnek (oraz wszystkiego z rodziny czosnkowatych: cebula, szczypior itp.)</li>
+                            <li>czosnek (oraz wszystko z rodziny czosnkowatych: cebula, szczypior itp.)</li>
                             <li>sałata lodowa</li>
                             <li>awokado</li>
                             <li>ziemniak</li>
