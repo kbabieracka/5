@@ -14,39 +14,42 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link rel="stylesheet" href="css/fontello.css" type="text/css" />
 
+    <script src="sorttable.js"></script>
     <script src="jquery.js"></script>
     <script src="jquery-3.5.1.min.js"></script>
     <script src="jquery.sticky.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src= "jquery.scrollTo.min.js"></script>
 
-    <script>
-
-        $(document).ready(function() {
-        var NavY = $('.sticker188').offset().top;
-         
-        var stickyNav = function(){
-        var ScrollY = $(window).scrollTop();
-              
-        if (ScrollY > NavY) { 
-            $('.sticker1').addClass('sticky');
-        } else {
-            $('.sticker1').removeClass('sticky'); 
-        }
-        };
-         
-        stickyNav();
-         
-        $(window).scroll(function() {
-            stickyNav();
-        });
-        });
-        
-    </script>
     
+    <script>
+        jQuery(function($)
+        {
+            $.scrollTo(0);
+
+            $('#link').click(function() { $.scrollTo($('#'), 500); });
+            $('#link').click(function() { $.scrollTo($('#'), 500); });
+            $('#link').click(function() { $.scrollTo($('#'), 500); });
+            $('#link').click(function() { $.scrollTo($('#'), 500); });
+            $('#link').click(function() { $.scrollTo($('#'), 500); });
+         
+
+        }
+        );
+
+        $(window).scroll(function()
+        {
+            if($(this).scrollTop()>300) $('.scrollup').fadeIn();
+            else $('.scrollup').fadeOut();
+        }
+        );
+    </script>
+
 
 
 </head>
 
-<body>
+body>
     <div class="container2">
         <header>   
             <div class="banner">
@@ -97,25 +100,153 @@
             <article>
                 <header>
                     <br>
-                    <h3>podtytuł</h3>
+                    <div class="pytanie1">
+                        <h2>  </h2>
+                    </div>
                 </header>
                 <section>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus egestas nisl vitae efficitur. Sed sollicitudin ante in ornare cursus. Praesent imperdiet ex in maximus iaculis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam mattis faucibus dolor. Morbi in vestibulum est, id pharetra dui. Nulla tristique ex eget efficitur egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque vel egestas mauris. Proin varius tortor eleifend orci auctor, in interdum augue vestibulum. Suspendisse vehicula sed orci eu pretium. Praesent ac ipsum venenatis, tempus diam a, tempor tellus. Pellentesque sit amet arcu at augue lobortis lobortis nec quis dolor. Nam ac sollicitudin dolor.
 
-                    Integer sed fringilla erat. Vivamus dolor nunc, condimentum sed accumsan faucibus, ullamcorper nec justo. Duis vel felis in dolor tincidunt venenatis. Suspendisse potenti. Pellentesque sodales faucibus tempor. Maecenas lacus ante, ullamcorper a tristique et, mollis quis elit. Vestibulum viverra quis diam in congue. Mauris porttitor, neque at accumsan vestibulum, erat elit eleifend enim, at ultricies velit nibh vel dolor. Aliquam ullamcorper luctus suscipit. Phasellus a luctus urna. Pellentesque semper bibendum elit id accumsan.
+                    <div class="tresc">
+                        <div class="opis">
+                            Spis treści:
+                            <ol>
+                                <li><a id="link1" href="#"></a> </li>
+                                <li><a id="link1" href="#"></a> </li>
+                                <li><a id="link1" href="#"></a> </li>
+                                <li><a id="link1" href="#"></a> </li>
+                                <li><a id="link1" href="#"></a> </li>
+                             
+                            </ol>
+                        </div>
+                        <div class="imgwpis">
+                            <img src="img/" width="1000" height="300">
+                        </div>
+                        <div class="pytanie" id=>
+                            <h2> Jaka ilość warzyw będzie odpowiednia dla mojej świnki?</h2>
+                        </div>
+                        <div class="opis">
+                            
+                        </div>
+                        <div class="imgwpis">
+                            <img src="img/.jpg" width="1000" height="300">
+                        </div>
+                        <div class="pytanie" id=warzywa2>
+                            <h2> </h2>
+                        </div>
+                        <div class="opis">
+                            
+                        </div>
+                        <div class="imgwpis">
+                            <img src="img/.jpg" width="1000" height="300">
+                        </div>
+                        <div class="pytanie" id=>
+                            <h2></h2>
+                        </div>
+                        <div class="opis">
+                            
+                        </div>
+                        
+                        <div class="pytanie" id=>
+                            <h2> Tabela uwzględniająca składniki odżywcze poszczególnych warzyw.</h2>
+                        </div>
+                        <div class="opis">
+                            <p>Komentarze do tabelki:</p>
+                            <ul>
+                                <li>podane wartości składników odżywczych odnoszą się do 100g produktu (wyjątki są oznaczone)</li>
+                                <li>stosuj produkty o niskiej zawartości wapnia (Ca), który może się nagromadzać powodując kamienie i osad w przewodzie moczowym</li>
+                                <li>stosuj produkty o niskiej zawartości kwasu szczawiowego, który może łączyć się z wapniem tworząc osad złożony z kryształów szczawianu wapnia</li>
+                                <li>staraj się zachować równowagę pomiędzy wapniem i fosforem (Ca:P), utzymując całkowity stosunek pomiędzy 1,5:1 a 2:1</li>
+                                <li>unikaj podawania dużych porcji produktów bogatych w cukier i skrobie</li>
+                                <li>produkty podajemy w stanie surowym</li>
+                                <li>kliknij na nagłówki kolumny aby posortować wartości od najmniejszej do największej</li>
+                                <li>najedź kursorem na obrazek produktu aby powiększyć</li>
+                            </ul>
+                        </div>
+                        <p>Produkty podzielono na następujące grupy:</p>
+                        <table>
+                            <tr>
+                                <th>Nazwa grupy</th>
+                                <th>Częstotliwość podawania</th>
+                            </tr>
+                            <tr bgcolor="lightgreen">
+                                <td style="text-align: center;">A</td>
+                                <td>podawaj codziennie</td>
+                            </tr>
+                            <tr bgcolor="#FFFA5E">
+                                <td style="text-align: center;">B</td>
+                                <td>podawaj często, 2-4 razy na tydzień</td>
+                            </tr>
+                            <tr bgcolor="#FF893D">
+                                <td style="text-align: center;">C</td>
+                                <td>podawaj okazjonalnie. 1-2 razy na tydzień</td>
+                            </tr>
+                            <tr bgcolor="#FF2A2A">
+                                <td style="text-align: center;">D</td>
+                                <td>podawaj rzadko, 1-2 razy na miesiąc</td>
+                            </tr>
+                            
+                        </table>
 
-                    Nullam imperdiet nulla eget leo ullamcorper, efficitur bibendum purus feugiat. Sed sagittis augue non elit egestas pretium. Nullam quam est, volutpat non elementum vel, tempor eu leo. Duis eleifend venenatis est. Donec tincidunt eleifend elit, at finibus dolor condimentum ac. In hac habitasse platea dictumst. Vivamus ornare ex vel nulla mollis accumsan. Maecenas massa elit, placerat vitae ornare in, rutrum sit amet nulla. Curabitur imperdiet et nulla vel interdum. Proin diam ante, congue sed posuere vel, semper in nulla. Donec euismod iaculis dolor a lacinia. Ut venenatis mi id lacinia scelerisque.
+                    </div>
 
-                    Interdum et malesuada fames ac ante ipsum primis Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus egestas nisl vitae efficitur. Sed sollicitudin ante in ornare cursus. Praesent imperdiet ex in maximus iaculis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam mattis faucibus dolor. Morbi in vestibulum est, id pharetra dui. Nulla tristique ex eget efficitur egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque vel egestas mauris. Proin varius tortor eleifend orci auctor, in interdum augue vestibulum. Suspendisse vehicula sed orci eu pretium. Praesent ac ipsum venenatis, tempus diam a, tempor tellus. Pellentesque sit amet arcu at augue lobortis lobortis nec quis dolor. Nam ac sollicitudin dolor.
+                    <table class="sortable">
+                        <tr>
+                          <th>Zdjęcie</th>
+                          <th>Warzywo</th>
+                          <th>Kalorie</th>
+                          <th>P<br> (g)</th>
+                          <th>S (g)</th>
+                          <th>Ca (mg)</th>
+                          <th>P (mg)</th>
+                          <th>Wit. C (mg)</th>
+                          <th>Wit. A (mg)</th>
+                          <th>Kwas szczawiowy (mg)</th>
+                          <th>Stosunek Ca:P</th>
+                          <th>Grupa</th>
+                          <th>Komentarz</th>
+                        </tr>
+                        <tr bgcolor="#FFFA5E" >
+                          <td><div class="vege"><img src="img/.jpg" alt="" width="70" height="60"></div></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
 
-                    Integer sed fringilla erat. Vivamus dolor nunc, condimentum sed accumsan faucibus, ullamcorper nec justo. Duis vel felis in dolor tincidunt venenatis. Suspendisse potenti. Pellentesque sodales faucibus tempor. Maecenas lacus ante, ullamcorper a tristique et, mollis quis elit. Vestibulum viverra quis diam in congue. Mauris porttitor, neque at accumsan vestibulum, erat elit eleifend enim, at ultricies velit nibh vel dolor. Aliquam ullamcorper luctus suscipit. Phasellus a luctus urna. Pellentesque semper bibendum elit id accumsan.
+        
+                </table>
+                
+                <div class="trescleft">
+                    <div class="pytanieleft" id="">
+                    <h2> </h2>  
+                    </div>
+                </div>
+                <div class="imgleft">
+                    <img src="img/.jpg" width="200" height="250">
+                </div>  
+                <div style="clear:both"></div>              
+            </section>
+        </article>
+    </div>
+</main>
+<footer>
+<div class="footer">DBAJMY O NASZE ŚWINIACZKI
+    <div class="footer1">Wszystkie prawa zastrzeżone, 2020 </div>
+</div>
+</footer>
 
-                    Nullam imperdiet nulla eget leo ullamcorper, efficitur bibendum purus feugiat. Sed sagittis augue non elit egestas pretium. Nullam quam est, volutpat non elementum vel, tempor eu leo. Duis eleifend venenatis est. Donec tincidunt eleifend elit, at finibus dolor condimentum ac. In hac habitasse platea dictumst. Vivamus ornare ex vel nulla mollis accumsan. Maecenas massa elit, placerat vitae ornare in, rutrum sit amet nulla. Curabitur imperdiet et nulla vel interdum. Proin diam ante, congue sed posuere vel, semper in nulla. Donec euismod iaculis dolor a lacinia. Ut venenatis mi id lacinia scelerisque.
 
-                    Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus non dolor ac nisl sodain faucibus. Phasellus non dolor ac nisl sodales pellentesque vel in risus. Donec ut massa nisl.
-                </section>
-            </article>
-        </div>
+
+</body>
+</html>
     </main>
 
 
