@@ -1,10 +1,42 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title> {% block title %} {% endblock %} </title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatibile" content="IE=edge,chrome=1" />
+
+    <title>ŚWINKI MORSKIE</title>
+    <meta name="description" content="Strona internetowa przedstawiająca rodzaje świnek morskich (kawii domowych)" />
+    <meta name="keywords" content="świnka morska, kawia domowa, zwierzątko domowe, zwierzę, przyjaciel, rodzaje, rasy, umaszczenie, kolory" />
+    <meta http-equiv="X-UA-Compatibile" content="IE=edge, chrome=1" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="css/fontello.css" type="text/css" />
+
+    <script src="sorttable.js"></script>
+    <script src="jquery.js"></script>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="jquery.sticky.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src= "jquery.scrollTo.min.js"></script>
+
+
 </head>
+
 <body>
+<div class="container2">
+        <header>
+            <div class="banner">
+                <figure>
+                    <a href="#"><img class="banner1" src= {% block bannersrc %} {% endblock %} width="800" height="300"></a>
+                    <a href="#" class="link1"><p> {% block title %} {% endblock %} </p></a>
+                </figure>
+            </div>
+        </header>
+    </div>
 
 </body>
+
+
 </html>
