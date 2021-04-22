@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href={{url_for('static',filename='styles/style.css')}} type="text/css" />
-    <link rel="stylesheet" href="css/fontello.css" type="text/css" />
+    <link rel="stylesheet" href={{url_for('static',filename='styles/fontello.css')}} type="text/css" />
 
     <script src="sorttable.js"></script>
     <script src="jquery.js"></script>
@@ -25,18 +25,170 @@
 </head>
 
 <body>
-<div class="container2">
+
+
+<div class="container3">
+    <div class="container2">
         <header>
             <div class="banner">
+                <a href="#" class="scrollup"></a>
                 <figure>
-                    <a href="#"><img class="banner1" src= {% block bannersrc %} {% endblock %} width="800" height="300"></a>
-                    <a href="#" class="link1"><p> {% block title %} {% endblock %} </p></a>
+                    <a href="#"><img class="banner1" src={% block bannersrc %} {% endblock %} width="800" height="300"></a>
+                    <a href="#" class="link1"><p> {% block title %} {% endblock %}</p></a>
                 </figure>
             </div>
         </header>
     </div>
+</div>
+
+<div class="sticker1">
+        <nav>
+            <ol class="wpis">
+                <li><a href="#"> Główna</a></li>
+                <li><a href="#">Żywienie</a>
+                    <ul>
+                        <li><a href="#"> Siano </a></li>
+                        <li><a href="#"> Karma</a></li>
+                        <li><a href="#"> Warzywa</a></li>
+                        <li><a href="#"> Owoce</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Pielęgnacja</a>
+                    <ul>
+                        <li><a href="#">Stado</a></li>
+                        <li><a href="#"> Klatka</a></li>
+                        <li><a href="#"> Opieka</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"> Zdrowie</a>
+                    <ul>
+                        <li><a href="#">Choroby</a></li>
+                        <li><a href="#"> Lekarstwa</a></li>
+                        <li><a href="#"> Alergie</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"> Inne</a></li>
+                <li><a href="#"> Galeria</a></li>
+            </ol>
+
+        </nav>
+    </div>
+
+<main>
+    <div class="container1">
+            <article>
+                <header>
+                    <br>
+                    <div class="pytanie1">
+                        <h2> {% block opis %} {% endblock %} </h2>
+                    </div>
+                </header>
+            </article>
+
+     <section>
+
+        <div class="tresc">
+            <div class="opis">
+                Spis treści:
+                <ol>
+                    <li><a id="link1" href="#warzywa1">{% block pyt1 %} {% endblock %}</a> </li>
+                    <li><a id="link2" href="#warzywa2">{% block pyt2 %} {% endblock %}</a></li>
+                    <li><a id="link3" href="#warzywa3">{% block pyt3 %} {% endblock %}</a></li>
+                    <li><a id="link4" href="#warzywa4">{% block pyt4 %} {% endblock %}</a></li>
+                    <li><a id="link5" href="#warzywa5">{% block pyt5 %} {% endblock %}</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="imgwpis">
+            <img src={% block imgsrc1 %} {% endblock %} width="1000" height="300">
+        </div>
+        <div class="pytanie" id=warzywa1>
+            <h2>{{ self.pyt1() }}</h2>
+        </div>
+        <div class="opis">
+            <p> {% block odp1 %} {% endblock %}</p>
+        </div>
+        <div class="imgwpis">
+            <img src={% block imgsrc2 %} {% endblock %} width="1000" height="300">
+        </div>
+        <div class="pytanie" id=warzywa2>
+            <h2>{{ self.pyt2() }}</h2>
+        </div>
+        <div class="opis">
+            <p>{% block odp2 %} {% endblock %}</p>
+        </div>
+        <div class="imgwpis">
+            <img src={% block imgsrc3 %} {% endblock %} width="1000" height="300">
+        </div>
+        <div class="pytanie" id=warzywa3>
+            <h2>{{ self.pyt3() }}</h2>
+        </div>
+        <div class="opis">
+            <p>
+            {% block odp3 %} {% endblock %}
+            </p>
+        </div>
+         <div class="pytanie" id=warzywa4>
+             <h2> Tabela uwzględniająca składniki odżywcze.</h2>
+         </div>
+         <div class="opis">
+             <p>Komentarze do tabelki:</p>
+             <ul>
+                 <li>podane wartości składników odżywczych odnoszą się do 100g produktu (wyjątki są oznaczone)</li>
+                 <li>stosuj produkty o niskiej zawartości wapnia (Ca), który może się nagromadzać powodując kamienie i osad w przewodzie moczowym</li>
+                 <li>stosuj produkty o niskiej zawartości kwasu szczawiowego, który może łączyć się z wapniem tworząc osad złożony z kryształów szczawianu wapnia</li>
+                 <li>staraj się zachować równowagę pomiędzy wapniem i fosforem (Ca:P), utzymując całkowity stosunek pomiędzy 1,5:1 a 2:1</li>
+                 <li>unikaj podawania dużych porcji produktów bogatych w cukier i skrobie</li>
+                 <li>produkty podajemy w stanie surowym</li>
+                 <li>kliknij na nagłówki kolumny aby posortować wartości od najmniejszej do największej</li>
+                 <li>najedź kursorem na obrazek produktu aby powiększyć</li>
+             </ul>
+         </div>
+         <p>Produkty podzielono na następujące grupy:</p>
+         <table>
+             <tr>
+                 <th>Nazwa grupy</th>
+                 <th>Częstotliwość podawania</th>
+             </tr>
+             <tr bgcolor="lightgreen">
+                 <td style="text-align: center;">A</td>
+                 <td>podawaj codziennie</td>
+             </tr>
+             <tr bgcolor="#FFFA5E">
+                 <td style="text-align: center;">B</td>
+                 <td>podawaj często, 2-4 razy na tydzień</td>
+             </tr>
+             <tr bgcolor="#FF893D">
+                 <td style="text-align: center;">C</td>
+                 <td>podawaj okazjonalnie. 1-2 razy na tydzień</td>
+             </tr>
+             <tr bgcolor="#FF2A2A">
+                 <td style="text-align: center;">D</td>
+                 <td>podawaj rzadko, 1-2 razy na miesiąc</td>
+             </tr>
+
+         </table>
+
+
+         {% block table %}
+         {% endblock %}
+
+         <div class="pytanie" id=owoce5>
+                            <h2>{{ self.pyt5() }}?</h2>
+         </div>
+                        <div class="opis">
+                            {% block odp5 %} {% endblock %}
+
+                        </div>
+     </section>
+    </div>
+</main>
+<footer>
+    <div class="footer">DBAJMY O NASZE ŚWINIACZKI
+        <div class="footer1">Wszystkie prawa zastrzeżone, 2020 </div>
+    </div>
+</footer>
 
 </body>
-
 
 </html>

@@ -8,8 +8,8 @@ def home():
     return render_template("index.html")
 
 @app.route("/home")
-def home1():
-    return render_template("index2.html")
+def wpis():
+    return render_template("wpis.html")
 
 
 
