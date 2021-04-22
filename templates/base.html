@@ -14,13 +14,35 @@
     <link rel="stylesheet" href={{url_for('static',filename='styles/style.css')}} type="text/css" />
     <link rel="stylesheet" href={{url_for('static',filename='styles/fontello.css')}} type="text/css" />
 
-    <script src="sorttable.js"></script>
-    <script src="jquery.js"></script>
-    <script src="jquery-3.5.1.min.js"></script>
-    <script src="jquery.sticky.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src= "jquery.scrollTo.min.js"></script>
 
+
+    <script src={{url_for('static', filename='scripts/jquery.js')}}></script>
+    <script src={{url_for('static', filename='scripts/jquery-3.5.1.min.js')}}></script>
+    <script src={{url_for('static', filename='scripts/sorttable.js')}}></script>
+    <script src={{url_for('static', filename='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')}}></script>
+    <script src={{url_for('static', filename='scripts/jquery.scrollTo.min.js')}}></script>
+    
+    <script>
+        jQuery(function($)
+        {
+            $.scrollTo(0);
+
+            $('#link1').click(function() { $.scrollTo($('#pyt1'), 500); });
+            $('#link2').click(function() { $.scrollTo($('#pyt2'), 500); });
+            $('#link3').click(function() { $.scrollTo($('#pyt3'), 500); });
+            $('#link4').click(function() { $.scrollTo($('#pyt4'), 500); });
+            $('#link5').click(function() { $.scrollTo($('#pyt5'), 500); });
+
+        }
+        );
+
+        $(window).scroll(function()
+        {
+            if($(this).scrollTop()>300) $('.scrollup').fadeIn();
+            else $('.scrollup').fadeOut();
+        }
+        );
+    </script>
 
 </head>
 
@@ -91,18 +113,18 @@
             <div class="opis">
                 Spis treści:
                 <ol>
-                    <li><a id="link1" href="#warzywa1">{% block pyt1 %} {% endblock %}</a> </li>
-                    <li><a id="link2" href="#warzywa2">{% block pyt2 %} {% endblock %}</a></li>
-                    <li><a id="link3" href="#warzywa3">{% block pyt3 %} {% endblock %}</a></li>
-                    <li><a id="link4" href="#warzywa4">{% block pyt4 %} {% endblock %}</a></li>
-                    <li><a id="link5" href="#warzywa5">{% block pyt5 %} {% endblock %}</a></li>
+                    <li><a id="link1" href="#pyt1">{% block pyt1 %} {% endblock %}</a> </li>
+                    <li><a id="link2" href="#pyt2">{% block pyt2 %} {% endblock %}</a></li>
+                    <li><a id="link3" href="#pyt3">{% block pyt3 %} {% endblock %}</a></li>
+                    <li><a id="link4" href="#pyt4">{% block pyt4 %} {% endblock %}</a></li>
+                    <li><a id="link5" href="#pyta5">{% block pyt5 %} {% endblock %}</a></li>
                 </ol>
             </div>
         </div>
         <div class="imgwpis">
             <img src={% block imgsrc1 %} {% endblock %} width="1000" height="300">
         </div>
-        <div class="pytanie" id=warzywa1>
+        <div class="pytanie" id=pyt1>
             <h2>{{ self.pyt1() }}</h2>
         </div>
         <div class="opis">
@@ -111,7 +133,7 @@
         <div class="imgwpis">
             <img src={% block imgsrc2 %} {% endblock %} width="1000" height="300">
         </div>
-        <div class="pytanie" id=warzywa2>
+        <div class="pytanie" id=pyt2>
             <h2>{{ self.pyt2() }}</h2>
         </div>
         <div class="opis">
@@ -120,7 +142,7 @@
         <div class="imgwpis">
             <img src={% block imgsrc3 %} {% endblock %} width="1000" height="300">
         </div>
-        <div class="pytanie" id=warzywa3>
+        <div class="pytanie" id=pyt3>
             <h2>{{ self.pyt3() }}</h2>
         </div>
         <div class="opis">
@@ -128,7 +150,7 @@
             {% block odp3 %} {% endblock %}
             </p>
         </div>
-         <div class="pytanie" id=warzywa4>
+         <div class="pytanie" id=pyt4>
              <h2> Tabela uwzględniająca składniki odżywcze.</h2>
          </div>
          <div class="opis">
@@ -173,7 +195,7 @@
          {% block table %}
          {% endblock %}
 
-         <div class="pytanie" id=owoce5>
+         <div class="pytanie" id=pyt5>
                             <h2>{{ self.pyt5() }}?</h2>
          </div>
                         <div class="opis">
