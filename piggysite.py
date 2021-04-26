@@ -15,6 +15,9 @@ def wpis():
 def wpis1():
     return render_template("wpis1.html")
 
+@app.route("/wpis2")
+def wpis2():
+    return render_template("wpis2.html")
 
 
 

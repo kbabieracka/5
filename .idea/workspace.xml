@@ -4,11 +4,7 @@
     <list default="true" id="de566e22-8058-4900-9dcb-4e292fdb4b40" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/piggysite.py" beforeDir="false" afterPath="$PROJECT_DIR$/piggysite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/swin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/szkietelwpisu.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/szkietelwpisu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/wpis2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/wpis1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/wpis1.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
