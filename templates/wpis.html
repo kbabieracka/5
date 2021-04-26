@@ -1,58 +1,10 @@
-<!DOCTYPE HTML>
-<html lang="pl">
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatibile" content="IE=edge,chrome=1" />
-    
-    <title>ŚWINKI MORSKIE</title>
-    <meta name="description" content="Strona internetowa przedstawiająca rodzaje świnek morskich (kawii domowych)" />
-    <meta name="keywords" content="świnka morska, kawia domowa, zwierzątko domowe, zwierzę, przyjaciel, rodzaje, rasy, umaszczenie, kolory" />
-    <meta http-equiv="X-UA-Compatibile" content="IE=edge, chrome=1" />
-    
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css" type="text/css" />
-    <link rel="stylesheet" href="css/fontello.css" type="text/css" />
 
-    <script src="sorttable.js"></script>
-
-    <script src="jquery.js"></script>
-    <script src="jquery-3.5.1.min.js"></script>
-    <script src="jquery.sticky.js"></script>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <script src= "jquery.scrollTo.min.js"></script>
-
-    <script>
-        jQuery(function($)
-        {
-            $.scrollTo(0);
-
-            $('#link1').click(function() { $.scrollTo($('#warzywa1'), 500); });
-            $('#link2').click(function() { $.scrollTo($('#warzywa2'), 500); });
-            $('#link3').click(function() { $.scrollTo($('#warzywa3'), 500); });
-            $('#link4').click(function() { $.scrollTo($('#warzywa4'), 500); });
-            $('#link5').click(function() { $.scrollTo($('#warzywa5'), 500); });
-
-        }
-        );
-
-        $(window).scroll(function()
-        {
-            if($(this).scrollTop()>300) $('.scrollup').fadeIn();
-            else $('.scrollup').fadeOut();
-        }
-        );
-    </script>
-
-    
+{% extends "base.html" %}  
 
 
-</head>
 
-<body>
-    <div class="container3">
+
+    <!--<div class="container3">
         <div class="container2">
             <header>   
                 <div class="banner">
@@ -64,10 +16,13 @@
                 </div>
             </header>    
         </div>
-    </div>
+    </div> -->
+    {% block bannersrc %} {{url_for('static',filename='img/warzywa/zywieniewpis.jpg')}} {% endblock %}
+    {% block title %} Jakie warzywa może jeść kawia domowa?{% endblock %}
+
 
      
-    <div class="sticker1">
+     <!--<div class="sticker1">
         <nav>
             <ol class="wpis">
                 <li><a href="#"> Główna</a></li>
@@ -98,11 +53,11 @@
             </ol>
         
         </nav>
-    </div>
+    </div> -->
  
     
-    <main>
-        <div class="container1">   
+
+         <!--<div class="container1">
             <article>
                 <header>
                     <br>
@@ -110,10 +65,12 @@
                         <h2> Instrukcje pomagające skomponować idealną warzywną dietę dla Twojego prosiaczka.    Zapoznaj się z nimi dokładnie i w razie wątpliwości zasięgnij opinii weterynarza, aby Twoje zwierzątko mogło cieszyć 
                             się zdrowym, długim i szczęśliwym życiem! </h2>
                     </div>
-                </header>
-                <section>
+                </header>  -->
+        {% block opis %} Instrukcje pomagające skomponować idealną warzywną dietę dla Twojego prosiaczka.    Zapoznaj się z nimi dokładnie i w razie wątpliwości zasięgnij opinii weterynarza, aby Twoje zwierzątko mogło cieszyć
+                            się zdrowym, długim i szczęśliwym życiem! {% endblock %}
 
-                    <div class="tresc">
+
+                    <!--<div class="tresc">
                         <div class="opis">
                             Spis treści:
                             <ol>
@@ -123,11 +80,21 @@
                                 <li><a id="link4" href="#warzywa4">Tabela uwzględniająca składniki odżywcze poszczególnych warzyw.</a></li>
                                 <li><a id="link5" href="#warzywa5">Czego kategorycznie nie powinna jeść świnka morska?</a></li>
                             </ol>
-                        </div>
-                        <div class="imgwpis">
+                        </div> -->
+                        {% block pyt1 %} Jaka ilość warzyw będzie odpowiednia dla mojej świnki?{% endblock %} }}
+                        {% block pyt2 %} Dlaczego zbilansowana dieta jest taka ważna? {% endblock %}
+                        {% block pyt3 %} Tak wiele możliwości! {% endblock %}
+                        {% block pyt4 %} Tabela uwzględniająca składniki odżywcze poszczególnych warzyw.{% endblock %}
+                        {% block pyt5 %} Czego kategorycznie nie powinna jeść świnka morska? {% endblock %}
+
+
+                        <!-- <div class="imgwpis">
                             <img src="img/warzywa/warzywa3.jpg" width="1000" height="300">
-                        </div>
-                        <div class="pytanie" id=warzywa1>
+                        </div> -->
+                        {% block imgsrc1 %} {{url_for('static',filename='img/warzywa/warzywa3.jpg')}}{% endblock %}
+
+
+                    <!-- <div class="pytanie" id=warzywa1>
                             <h2> Jaka ilość warzyw będzie odpowiednia dla mojej świnki?</h2>
                         </div>
                         <div class="opis">
@@ -167,9 +134,29 @@
                             Podczas gdy wiele roślin zawiera podobne składniki odżywcze, zawsze możemy eksperymentować z ich aromatem, smakiem i teksturą. Śmiało sprawdzajmy zatem co nasze świnki
                             lubią najbardziej!
                             </p>
-                        </div>
+                        </div> -->
+                    {% block imgsrc2 %} {{url_for('static',filename='img/warzywa/warzywa2.jpg')}}{% endblock %}
+                    {% block imgsrc3 %} {{url_for('static',filename='img/warzywa/warzywa1.jpg')}}{% endblock %}
+
+                    {% block odp1 %} Warzywa są w diecie świnki morskiej doskonałym źródłem kluczowych mikroelementów takich jak witaminy i minerały. Są również świetnym sposobem aby wprowadzić do jadłospisu świnki
+                            trochę różnorodności. Warzywa powinny stanowić ok. 10% całkowitej objętości jedzenia spożywanego przez gryzonie (najwięcej bo ok. 70% powinno stanowić siano a resztę sucha karma i owoce).
+                            Zaleca się podawanie połowy kubka warzyw i zieleniny na każde 0,5kg wagi ciała Twojego zwierzaka. Zielone, jadalne części roślin powinny stanowić znaczną większczość podawanych warzyw,
+                            resztę będą stanowiły warzywa korzeniowe. Czyli świnka ważąca 1 kg powinna dostawać prawie cały kubek zieleniny i dodatkowe 2 łyżki kuchanne warzyw korzennych.  {% endblock %}
+                    {% block odp2 %} Z pewnością chcemy zabezpieczyć naszych małych przyjaciół przed różnego typu chorobami układu pokarmowego i moczowego, które mogą wynikać z niedoborów lub nadmiaru różnych substancji.
+                            Odpowiednia dieta ma odżywiać i polepszać stan skóry, futra, zębów oraz zwiększać energię i wewnętrzne zdrowie naszego futrzaka.
+                            </p>
+                            <p>
+                            Chociaż wymienione w tym artykule warzywa ogólnie są uznawane za odpowiednią opcją dla naszego zwierzaka, zawsze warto jest dopasować dietę do jego indywidualnych potrzeb. Dla przykładu
+                            warzywa bogate w wapń i kwas szczawiowy powinny być znacznie ograniczone lub całkowicie odstawione jeśli nasza świnka miała kiedyś problemy z kamieniami nerkowymi. Tak samo bardzo kaloryczne
+                            warzywa bogate w cukier nie powinny być podawane świnkom, które mają problem z nadmierną wagą ciała.  {% endblock %}
+                    {% block odp3 %} Różnorodność w diecie jest bardzo ważna w życiu, również dla naszych pupili.  Oczywiście powinniśmy stopniowo przedstawiać nowe smakołyki naszym świnkom aby nie przeciążyć ich układu pokarmowego. Szybkie zmiany mogą sprawić, że zwierzak pochoruje się i nie będzie chciał już więcej spróbować danego warzywa.</p>
+                            <p>Kolejnym problemem może być brak zainteresowania świnki nowym pożywieniem. Niektóre zwierzątka są ciekawskie i odważne, a inne bardzo podejrzliwe i w ciemno nie uwierzą, że ten nowy przedmiot
+                            koło ich pyszczka jest jadalny. Warto wtedy pociąć warzywo na malutkie kawałeczki i położyć obok znanego im jedzenia. Zachowując powyższe zasady ważne jest, aby karmić naszego zwierzaka różnymi typami warzyw. Zdecydowanie ubogaci to jego świat i sprawi, że będzie on ciągle zainteresowany swoją dietą.
+                            Podczas gdy wiele roślin zawiera podobne składniki odżywcze, zawsze możemy eksperymentować z ich aromatem, smakiem i teksturą. Śmiało sprawdzajmy zatem co nasze świnki
+                            lubią najbardziej! {% endblock %}
+
                         
-                        <div class="pytanie" id=warzywa4>
+                    <!--    <div class="pytanie" id=warzywa4>
                             <h2> Tabela uwzględniająca składniki odżywcze poszczególnych warzyw.</h2>
                         </div>
                         <div class="opis">
@@ -210,8 +197,9 @@
                             
                         </table>
 
-                    </div>
+                    </div> -->
 
+                                {% block table %}
                     <table class="sortable">
                         <tr>
                           <th>Zdjęcie</th>
@@ -229,7 +217,7 @@
                           <th>Komentarz</th>
                         </tr>
                         <tr bgcolor="#FFFA5E" >
-                          <td><div class="vege"><img src="img/warzywa/karczoch.jpg" alt="karczoch" width="70" height="60"></div></td>
+                          <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/karczoch.jpg')}}  alt="karczoch" width="70" height="60"></div></td>
                           <td>Karczoch</td>
                           <td>47</td>
                           <td>3,27</td>
@@ -244,7 +232,7 @@
                           <td>-</td>
                         </tr>
                         <tr bgcolor="#FF893D">
-                            <td><div class="vege"><img src="img/warzywa/szparagi.jpg" alt="szparagi" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/szparagi.jpg')}} alt="szparagi" width="70" height="60"></div></td>
                             <td>Szparagi</td>
                             <td>20</td>
                             <td>2,20</td>
@@ -259,7 +247,7 @@
                             <td>-</td>  
                         </tr>
                         <tr bgcolor="#FFFA5E">
-                            <td><div class="vege"><img src="img/warzywa/fasolka.jpg" alt="fasola" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/fasolka.jpg')}} alt="fasola" width="70" height="60"></div></td>
                             <td>Fasola</td>
                             <td>31</td>
                             <td>1,82</td>
@@ -275,7 +263,7 @@
                             
                         </tr>
                         <tr bgcolor="#FF893D">
-                            <td><div class="vege"><img src="img/warzywa/burak.jpg" alt="burak" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/burak.jpg')}} alt="burak" width="70" height="60"></div></td>
                             <td>Burak</td>
                             <td>43</td>
                             <td>1,61</td>
@@ -290,7 +278,7 @@
                             <td>zalecane podawanie ciężarnym i karmiącym samiczkom, pomocny w leczeniu anemii,pobudza apetyt, przydatny dla niejadków i świnek anorektycznych</td>
                         </tr>
                         <tr bgcolor="#FF893D">
-                            <td><div class="vege"><img src="img/warzywa/brokul.jpg" alt="brokul" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/brokul.jpg')}} alt="brokul" width="70" height="60"></div></td>
                             <td>Brokuł</td>
                             <td>34</td>
                             <td>2,82</td>
@@ -305,7 +293,7 @@
                             <td>bardzo gazotwórczy, tylko małe ilości</td>
                         </tr>
                         <tr bgcolor="#FF893D">
-                            <td><div class="vege"><img src="img/warzywa/brukselka.jpg" alt="brukselka" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/brukselka.jpg')}} alt="brukselka" width="70" height="60"></div></td>
                             <td>Brukselka</td>
                             <td>43</td>
                             <td>3,38</td>
@@ -320,7 +308,7 @@
                             <td>bardzo gazotwórcza, tylko małe ilości</td>
                         </tr>
                         <tr bgcolor="#FFFA5E">
-                            <td><div class="vege"><img src="img/warzywa/kapustabiala.jpg" alt="kapusta biala" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/kapustabiala.jpg')}} alt="kapusta biala" width="70" height="60"></div></td>
                             <td>Kapusta biała</td>
                             <td>24</td>
                             <td>1,44</td>
@@ -335,7 +323,7 @@
                             <td>bardzo gazotwórcza, tylko małe ilości</td>
                         </tr>
                         <tr bgcolor="#FFFA5E">
-                            <td><div class="vege"><img src="img/warzywa/kapustaczerwona.jpg" alt="kapusta czerwona" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/kapustaczerwona.jpg')}} alt="kapusta czerwona" width="70" height="60"></div></td>
                             <td>Kapusta czerwona</td>
                             <td>31</td>
                             <td>1,43</td>
@@ -350,7 +338,7 @@
                             <td>bardzo gazotwórcza, tylko małe ilości</td>
                         </tr>
                         <tr bgcolor="#FFFA5E">
-                            <td><div class="vege"><img src="img/warzywa/kapustawloska.jpg" alt="kapusta wloska" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/kapustawloska.jpg')}} alt="kapusta wloska" width="70" height="60"></div></td>
                             <td>Kapusta włoska</td>
                             <td>27</td>
                             <td>2,00</td>
@@ -365,7 +353,7 @@
                             <td>bardzo gazotwórcza, tylko małe ilości</td>
                         </tr>
                         <tr bgcolor="#FF893D" >
-                            <td><div class="vege"><img src="img/warzywa/kapustachinska.jpg" alt="kapusta chinska" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/kapustachinska.jpg')}} alt="kapusta chinska" width="70" height="60"></div></td>
                             <td>Kapusta chińska</td>
                             <td>13</td>
                             <td>1,50</td>
@@ -380,7 +368,7 @@
                             <td>bardzo gazotwórcza, tylko małe ilości</td>
                         </tr>
                         <tr bgcolor="lightgreen">
-                            <td><div class="vege"><img src="img/warzywa/marchew.jpg" alt="marchew" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/marchew.jpg')}} alt="marchew" width="70" height="60"></div></td>
                             <td>Marchew (młoda)</td>
                             <td>1</td>
                             <td>0,06</td>
@@ -395,7 +383,7 @@
                             <td>nie powoduje wzdęć, zaparć ani biegunek, poprawia trawienie, wspomaga leczenie biegunki.</td>
                         </tr>
                         <tr bgcolor="#FF893D">
-                            <td><div class="vege"><img src="img/warzywa/kalafior.jpg" alt="kalafior" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/kalafior.jpg')}} alt="kalafior" width="70" height="60"></div></td>
                             <td>Kalafior</td>
                             <td>25</td>
                             <td>1,98</td>
@@ -411,7 +399,7 @@
                             <td>bardzo gazotwórcza, tylko małe ilości</td>
                         </tr>
                         <tr bgcolor="#FFFA5E">
-                            <td><div class="vege"><img src="img/warzywa/selernaciowy.jpg" alt="seler naciowy" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/selernaciowy.jpg')}} alt="seler naciowy" width="70" height="60"></div></td>
                             <td>Seler naciowy</td>
                             <td>14</td>
                             <td>0,69</td>
@@ -426,7 +414,7 @@
                             <td>potnij w kawałeczki, usuń włókna</td>
                         </tr>
                         <tr bgcolor="#FF893D">
-                            <td><div class="vege"><img src="img/warzywa/kukurydza.jpg" alt="kukurydza" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/kukurydza.jpg')}} alt="kukurydza" width="70" height="60"></div></td>
                             <td>Kukurydza</td>
                             <td>77</td>
                             <td>2,90</td>
@@ -441,7 +429,7 @@
                             <td>mogą być karmione codziennie łuskami i jedwabiem kukurydzy</td>
                         </tr>
                         <tr bgcolor="#FFFA5E">
-                            <td><div class="vege"><img src="img/warzywa/ogorek.jpg" alt="ogorek" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/ogorek.jpg')}} alt="ogorek" width="70" height="60"></div></td>
                             <td>Ogórek</td>
                             <td>15</td>
                             <td>0,65</td>
@@ -456,7 +444,7 @@
                             <td>świetny przysmak przy oswajaniu świnek, „nawadniacz" dla niepijących świnek</td>
                         </tr>
                         <tr bgcolor="#FFFA5E">
-                            <td><div class="vege"><img src="img/warzywa/groszek.jpg" alt="groszek" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/groszek.jpg')}} alt="groszek" width="70" height="60"></div></td>
                             <td>Groszek</td>
                             <td>42</td>
                             <td>2,80</td>
@@ -472,7 +460,7 @@
                             <td>1-2 strączki na świnkę</td>
                         </tr>
                         <tr bgcolor="lightgreen">
-                            <td><div class="vege"><img src="img/warzywa/paprykazielona.jpg" alt="papryka zielona" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/paprykazielona.jpg')}} alt="papryka zielona" width="70" height="60"></div></td>
                             <td>Papryka zielona</td>
                             <td>20</td>
                             <td>0,86</td>
@@ -488,7 +476,7 @@
                             <td>warzywo najbogatsze w witaminę C - świetny zamiennik dla sztucznej witaminy w płynie</td>
                         </tr>
                         <tr bgcolor="lightgreen">
-                            <td><div class="vege"><img src="img/warzywa/paprykazolta.jpg" alt="papryka zolta" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/paprykazolta.jpg')}} alt="papryka zolta" width="70" height="60"></div></td>
                             <td>Papryka żółta</td>
                             <td>27</td>
                             <td>1,00</td>
@@ -503,7 +491,7 @@
                             <td>warzywo najbogatsze w witaminę C - świetny zamiennik dla sztucznej witaminy w płynie</td>
                         </tr>
                         <tr bgcolor="#FFFA5E">
-                            <td><div class="vege"><img src="img/warzywa/paprykaczerwona.jpg" alt="papryka czerwona" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/paprykaczerwona.jpg')}} alt="papryka czerwona" width="70" height="60"></div></td>
                             <td>Papryka czerwona</td>
                             <td>26</td>
                             <td>0,99</td>
@@ -518,7 +506,7 @@
                             <td>oprócz wit. C dodatkowo wysoka zawartość cukru</td>
                         </tr>
                         <tr bgcolor="#FF893D">
-                            <td><div class="vege"><img src="img/warzywa/dynia.jpg" alt="dynia" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/dynia.jpg')}} alt="dynia" width="70" height="60"></div></td>
                             <td>Dynia</td>
                             <td>26</td>
                             <td>1,00</td>
@@ -533,7 +521,7 @@
                             <td>pestki dyni tuczą, ale pomagają zabić pasożyty w jelitach, reguluje wydzielanie hormonów i wit.D</td>
                         </tr>
                         <tr bgcolor="lightgreen">
-                            <td><div class="vege"><img src="img/warzywa/cykoria.jpg" alt="cykoria" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/cykoria.jpg')}} alt="cykoria" width="70" height="60"></div></td>
                             <td>Cykoria sałatowa</td>
                             <td>23</td>
                             <td>1,43</td>
@@ -548,7 +536,7 @@
                             <td>-</td>
                         </tr>
                         <tr bgcolor="#FFFA5E">
-                            <td><div class="vege"><img src="img/warzywa/zodkiewka.jpg" alt="zodkiewka" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/zodkiewka.jpg')}} alt="zodkiewka" width="70" height="60"></div></td>
                             <td>Rzodkiewka</td>
                             <td>16</td>
                             <td>0,68</td>
@@ -563,7 +551,7 @@
                             <td>wysoka zawartość szczawianów, ma lekko piekący smak, zwiększa apetyt oraz poprawia pamięć</td>
                         </tr>
                         <tr bgcolor="#FF2A2A">
-                            <td><div class="vege"><img src="img/warzywa/batat.jpg" alt="batat" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/batat.jpg')}} alt="batat" width="70" height="60"></div></td>
                             <td>Batat</td>
                             <td>86</td>
                             <td>1,57</td>
@@ -578,7 +566,7 @@
                             <td>wysoka zawartość cukru i szczawianów</td>
                         </tr>
                         <tr bgcolor="#FFFA5E">
-                            <td><div class="vege"><img src="img/warzywa/pomidor.jpg" alt="pomidor" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/pomidor.jpg')}} alt="pomidor" width="70" height="60"></div></td>
                             <td>Pomidor</td>
                             <td>18</td>
                             <td>0,88</td>
@@ -593,7 +581,7 @@
                             <td>nadmiar potasu, którego jest dużo w pomidorach, może zaburzać pracę nerek i serca, szypułki i liście trujące dla świnek.</td>
                         </tr>
                         <tr bgcolor="#FF893D">
-                            <td><div class="vege"><img src="img/warzywa/rzepa.jpg" alt="rzepa" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/rzepa.jpg')}} alt="rzepa" width="70" height="60"></div></td>
                             <td>Rzepa</td>
                             <td>28</td>
                             <td>0,90</td>
@@ -609,7 +597,7 @@
                             <td>wysoka zawartość cukru i szczawianów, spora ilość wit. C, ma lekko piekący smak,</td>
                         </tr>
                         <tr bgcolor="lightgreen">
-                            <td><div class="vege"><img src="img/warzywa/cukinia.jpg" alt="cukinia" width="70" height="60"></div></td>
+                            <td><div class="vege"><img src={{url_for('static',filename='img/warzywa/cukinia.jpg')}} alt="cukinia" width="70" height="60"></div></td>
                             <td>Cukinia</td>
                             <td>16</td>
                             <td>1,21</td>
@@ -623,9 +611,9 @@
                             <td>A</td>
                             <td>-</td>
                         </tr>
-                    </table>
+                    </table> {% endblock %}
                     
-                    <div class="trescleft">
+                    <!-- <div class="trescleft">
                         <div class="pytanieleft" id="warzywa5">
                         <h2> Czego kategorycznie nie powinna jeść świnka morska?</h2>  
                         </div>
@@ -639,7 +627,7 @@
                             <li>orzechy</li>   
                         </ul>
                     </div>
-                    <div class="imgleft">
+                     <div class="imgleft">
                         <img src="img/warzywa/warzywa4.jpg" width="200" height="250">
                     </div>  
                     <div style="clear:both"></div>              
@@ -651,9 +639,14 @@
     <div class="footer">DBAJMY O NASZE ŚWINIACZKI
         <div class="footer1">Wszystkie prawa zastrzeżone, 2020 </div>
     </div>
-</footer>
+</footer> -->
+                    {% block odp5 %} <ul class="zwyklalista">
+                            <li>NICZEGO CZEGO NIE JESTEŚ PEWIEN!</li>
+                            <li>czosnek (oraz wszystko z rodziny czosnkowatych: cebula, szczypior itp.)</li>
+                            <li>sałata lodowa</li>
+                            <li>awokado</li>
+                            <li>ziemniak</li>
+                            <li>rabarbar</li>
+                            <li>orzechy</li>
+                        </ul> {% endblock %}
 
-
-
-</body>
-</html>

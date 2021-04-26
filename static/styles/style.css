@@ -1,5 +1,5 @@
 body {
-    background-image: url("img/tlo.png");
+    background-image: url(../img/tlo.png);
     font-family: 'Noto Serif', serif;
     margin: 0 !important;
 }
@@ -620,7 +620,7 @@ tr, td {
     width: 269px;
     height: 192px;
     text-decoration: none;
-    background: url("img/przycisk.png") no-repeat 0px 0px;
+    background: url(../img/przycisk.png) no-repeat 0px 0px;
     position: fixed;
     right: -10px;
     bottom: 20px; 

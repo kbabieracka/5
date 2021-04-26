@@ -1,0 +1,42 @@
+{% extends "base.html" %}  
+
+
+<!-- Zdjęcie dla całego artykułu, wraz z jego źródłem oraz tytuł akrtykułu wyświetlany na zdjęciu-->
+
+{% block bannersrc %} {{url_for('static',filename='img/.jpg')}} {% endblock %}
+{% block title %} {% endblock %}
+
+<!-- (Krótki opis artykułu): Instrukcje pomagające skomponować idealną warzywną dietę dla Twojego prosiaczka. Zapoznaj się z nimi dokładnie i w razie wątpliwości zasięgnij opinii weterynarza, aby Twoje zwierzątko mogło cieszyć
+się zdrowym, długim i szczęśliwym życiem! 
+  --> 
+
+{% block opis %}  {% endblock %}
+
+<!-- Pięć tematów/części na które podzielony jest wpis. Tutaj: spis treści -->
+
+{% block pyt1 %} {% endblock %}
+{% block pyt2 %} {% endblock %}
+{% block pyt3 %} {% endblock %}
+{% block pyt4 %} {% endblock %}
+{% block pyt5 %} {% endblock %}
+
+<!-- Zdjęcia ilustrujące poszczególne części wpisu-->
+
+{% block imgsrc1 %} {{url_for('static',filename='img/.jpg')}}{% endblock %}
+{% block imgsrc2 %} {{url_for('static',filename='img/.jpg')}}{% endblock %}
+{% block imgsrc3 %} {{url_for('static',filename='img/.jpg')}}{% endblock %}
+
+<!-- Treść poszczególnych wpisów-->
+
+{% block odp1 %}  {% endblock %}
+{% block odp2 %}  {% endblock %}
+{% block odp3 %}  {% endblock %}
+{% block odp4 %}  {% endblock %}
+{% block odp5 %}  {% endblock %}
+
+
+<!-- Opcjonalna tabelka -->
+{% block table %} {% endblock %}
+
+
+

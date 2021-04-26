@@ -1,0 +1,457 @@
+{% extends "base.html" %}  
+
+
+<!-- Zdjęcie dla całego artykułu, wraz z jego źródłem oraz tytuł artykułu wyświetlany na zdjęciu-->
+
+{% block bannersrc %} {{url_for('static',filename='img/owoce/owocewpis.jpg')}} {% endblock %}
+{% block title %} Jakie owoce powinna jeść kawia domowa? {% endblock %}
+
+<!-- (Krótki opis artykułu): Instrukcje pomagające skomponować idealną warzywną dietę dla Twojego prosiaczka. Zapoznaj się z nimi dokładnie i w razie wątpliwości zasięgnij opinii weterynarza, aby Twoje zwierzątko mogło cieszyć
+się zdrowym, długim i szczęśliwym życiem! 
+  --> 
+
+{% block opis %} Instrukcje pomagające skomponować idealne owocowe dodatki dla Twojego prosiaczka.    Zapoznaj się z nimi dokładnie i w razie wątpliwości zasięgnij opinii weterynarza, aby Twoje zwierzątko mogło cieszyć 
+się zdrowym, długim i szczęśliwym życiem! {% endblock %}
+
+<!-- Pięć tematów/części na które podzielony jest wpis. Tutaj: spis treści -->
+
+{% block pyt1 %} Czy świnka morska może jeść owoce? {% endblock %}
+{% block pyt2 %} Jaka ilość owoców jest odpowiednia dla świnki morskiej? {% endblock %}
+{% block pyt3 %} Jak przygotować owoce do spożycia {% endblock %}
+{% block pyt4 %} Tabela uwzględniająca składniki odżywcze poszczególnych owoców {% endblock %}
+{% block pyt5 %} Czego powinna unikać świnka morska? {% endblock %}
+
+<!-- Zdjęcia ilustrujące poszczególne części wpisu-->
+
+{% block imgsrc1 %} {{url_for('static',filename='img/owoce/owoce1.jpg')}}{% endblock %}
+{% block imgsrc2 %} {{url_for('static',filename='img/owoce/owoce2.jpg')}}{% endblock %}
+{% block imgsrc3 %} {{url_for('static',filename='img/owoce/owoce3.jpg')}}{% endblock %}
+
+<!-- Treść poszczególnych wpisów-->
+
+{% block odp1 %} Zapewne tak samo jak wielu posiadaczy świnek morskich, chcesz rozpieszczać swoje zwierzątka, jak to tylko jest
+możliwe. Wiele osób robi to poprzez podawanie swoim pupilom przepysznych przekąsek w tym owoców.
+Dodatkowo owoce, oprócz niepowtarzalnego smaku, zawierają błonnik i witaminy. Są to składniki niezbędne do utrzymania zdrowia naszych pupili.  {% endblock %}
+
+{% block odp2 %} Zwierzątka zazwyczaj nie przejadają się same z siebie, ale nawet względnie niewielkie ilości owoców mogą prowadzić do różnych problemów.
+Jako, że niektóre owoce zawierają zbyt dużo cukru, gryzonie mogą w szybkim czasie przyswoić zbyt dużą ilość kalorii co prowadzi do zwiększenia
+masy ciała, utrudniając im poruszanie się i zmniejszając ich komfort życia. Podsumowując dieta bogata w zbyt dużo słodkich owoców może 
+powodować biegunkę oraz otyłość prowadzącą do cukrzycy. Dodatkowo niektóre owoce są dosyć kwaskowate
+co może podrażniać delikatne okolice pyszczków u naszych małych przyjaciół. 
+</p>
+<p>
+Generalnie przyjmuje się, że jeżeli śwince na dzień podaje się objętościowo około jeden kubek świeżych warzyw, to najwyżej 1/4 tego kubka
+mogą zajmować owoce. Najlepiej jednak podawać śwince owoce co drugi dzień, przy okazji monitorując czy gryzoń nie powiększa się w niekontrolowany 
+sposób. Małe porcje owoców, podawane okazjonalnie z pewnością uszczęśliwią Twoją świnkę, dostarczając jej tak potrzebnej witaminy C.  {% endblock %}
+
+{% block odp3 %} Wiemy już, że włączenie owoców do diety kawii domowej jest świetnym pomysłem. Dodatkowo warto też być pewnym,
+że podawane przez nas owoce są dla niej odpowiednio przygotowane. Niektóre rośliny mają trującą szypułkę, liście, nasiona
+lub trzon a inne mogą być trudne w pogryzieniu jeżeli nie są pocięte na małe kawałeczki. Poniższe zasady sprawią, że dając swojej śwince owoce
+sprawisz jej tylko i wyłącznie radość. </p>
+<p>
+<h4>1. Kupuj owoce z miejsc, do których masz zaufanie </h4></p><p>
+Każdy lubi oszczędzić nieco grosza i kupić coś z supermarketu, ale nikt nie chce jeść czegoś co jest
+zanieczyszczone pestycydami albo jest tak stare, że już gnije. Jeśli podasz taki niepewny owoc świniaczkowi może to sprawić, że 
+Twój zwierzak zatruje się lub nawet umrze. 
+</p>
+<p>
+<h4>2. Myj owoce </h4></p><p>
+Większość owoców sprzedawanych w sklepach spożywczych ma na sobie resztki chemicznych oprysków. Ważne jest 
+więc aby przed podaniem dokładnie myć owoce w ciepłej wodzie. Zawsze róbmy to zanim zaczniemy kroić owoce, 
+ponieważ trujące chemiczne związki znajdujące się na skórce mogą na ostrzu noża dostać się do soczystego miąszu. 
+</p>
+<p>
+<h4>3. Potnij owoce na małe kawałki </h4></p><p>
+Świnki morskie mają duże zęby, ale dużo łatwiejsze będzie dla nich jedzenie owoców jeżeli potniesz je najpierw na 
+małe części. Ważne jest również pozbycie się skórki z owoców, która mimo, że zawiera dużo witamin i minerałów 
+to jest ciężka do strawienia. Szatkowanie owoców pomaga też rozprowadzić po pomieszczeniu ich apetyczny aromat co sprawi, że świnki 
+będą czerpać z przękąski jeszcze więcej przyjemności
+</p>
+<p>
+<h4>4. Pozwól owocom ogrzać się do temperatury pokojowej </h4></p><p>
+Świnki nie do końca lubią zimne pożywienie. Właściwie może ono nawet zaziębić nasze świnki czego oczywiście nie 
+chcemy. W wyniku czego zawsze gdy wyciągasz owoce z lodówki musisz poczekać, aż ogrzeją się one naturalnie do 
+temperatury pokojowej. Zrób to przed umyciem i cięciem owoców dla jak najlepszego rezultatu. 
+</p>
+<p><h4>
+5. Usuń wszystkie niedojedzone części</h4></p><p>
+W wielu przypadkach można zauważyć, że świnka nie jest w stanie zjeść całej przenaczonej dla niej porcji. Szybko te
+niedojedzone cząstki zaczynają gnić, stają się siedliskiem bakterii oraz przyciągają insekty. Konsekwentnie więc
+usuwaj takie ewwentualne zostawione resztki godzinę po podaniu. To nie tylko pomoże w utrzymaniu otoczenia świnki 
+czystym i suchym, ale także zapobiegnie powstawaniu nieprzyjemnego zapachu. 
+</p>
+<p><h4>
+6. Zawsze myj naczynia</h4></p><p>
+Jako, że nie chcemy aby naczynie na którym podajemy śwince jedzenie zostało zakażone przez bakterie występujące 
+w posłaniu świnek pamiętajmy, żeby zawsze po posiłku umyć je w ciepłej wodzie. Ważne jest też żeby używać innych 
+pojemników do siana, suchej karmy i warzyw/owoców.  {% endblock %}
+
+{% block odp4 %}  {% endblock %}
+
+
+{% block odp5 %} Niektórzy weterynarze uważają, że winogrona mogą prowadzić do schorzeń nerek u świnek, dlatego należy 
+unikać ich podawania. Ale jeśli już to robisz, to podawaj ich w niewielkich ilościach i dopilnuj by owoce
+nie zawierały pestek. </p>
+<p>Świnki nie mogą też jeść trzonu jabłka ponieważ zawiera on cyjanoidy oraz inne szkodliwe toksyny. Pamiętaj więc aby przed
+podaniem usunąć z jabłka wszystkie niejadalne części. 
+</p>
+<p>Warto też zwrócić uwagę na kawałeczki suszonych owoców, które często znajdują się w suchej karmie. One w małych ilościach nie zaszkodzą Twojej śwince ale nie powinno sie ich podawać zbyt często ze względu na 
+ekstremalnie dużą zawartość cukrów.  {% endblock %}
+
+
+<!-- Opcjonalna tabelka -->
+{% block table %}                             
+<table class="sortable">
+    <tr>
+      <th>Zdjęcie</th>
+      <th>Owoc</th>
+      <th>Kalorie</th>
+      <th>P<br> (g)</th>
+      <th>S (g)</th>
+      <th>Ca (mg)</th>
+      <th>P (mg)</th>
+      <th>Wit. C (mg)</th>
+      <th>Wit. A (mg)</th>
+      <th>Kwas szczawiowy (mg)</th>
+      <th>Stosunek Ca:P</th>
+      <th>Grupa</th>
+      <th>Komentarz</th>
+    </tr>
+    <tr bgcolor="#FF893D" >
+      <td><div class="vege"><img src={{url_for('static',filename='img/owoce/jablko.jpg')}} alt="jabłko" width="70" height="60"></div></td>
+      <td>Jabłko</td>
+      <td>52</td>
+      <td>0,26</td>
+      <td>10,39</td>
+      <td>6</td>
+      <td>11</td>
+      <td>4,6</td>
+      <td>3</td>
+      <td>-</td>
+      <td>0,5:1</td>
+      <td>C</td>
+      <td>wysoka zawartość cukru</td>
+    </tr>
+    <tr bgcolor="#FF893D" >
+        <td><div class="vege"><img src={{url_for('static',filename='img/owoce/morela.jpg')}} alt="morela" width="70" height="60"></div></td>
+        <td>Morela</td>
+        <td>48</td>
+        <td>1,40</td>
+        <td>9,24</td>
+        <td>13</td>
+        <td>23</td>
+        <td>10</td>
+        <td>96</td>
+        <td>-</td>
+        <td>0,5:1</td>
+        <td>C</td>
+        <td>-</td>
+      </tr>
+    <tr bgcolor="#FF2A2A" >
+        <td><div class="vege"><img src={{url_for('static',filename='img/owoce/banan.jpg')}} alt="banan" width="70" height="60"></div></td>
+        <td>Banan</td>
+        <td>89</td>
+        <td>1,09</td>
+        <td>12,23</td>
+        <td>5</td>
+        <td>22</td>
+        <td>8,7</td>
+        <td>3</td>
+        <td>-</td>
+        <td>0,2:1</td>
+        <td>D</td>
+        <td>może powodować zaparcia, podawaj w małych ilościach</td>
+      </tr>
+  
+      <tr bgcolor="#FFFA5E" >
+        <td><div class="vege"><img src={{url_for('static',filename='img/owoce/jezyna.jpg')}} alt="jeżyna" width="70" height="60"></div></td>
+        <td>Jeżyny (25 gram)</td>
+        <td>11</td>
+        <td>0,35</td>
+        <td>1,22</td>
+        <td>7</td>
+        <td>6</td>
+        <td>5,2</td>
+        <td>3</td>
+        <td>-</td>
+        <td>1,1:1</td>
+        <td>B</td>
+        <td>-</td>
+      </tr>
+      <tr bgcolor="#FFFA5E" >
+        <td><div class="vege"><img src={{url_for('static',filename='img/owoce/jagody.jpg')}} alt="jagody" width="70" height="60"></div></td>
+        <td>Jagody (25 gram)</td>
+        <td>14</td>
+        <td>0,18</td>
+        <td>2,49</td>
+        <td>2</td>
+        <td>3</td>
+        <td>2,4</td>
+        <td>1</td>
+        <td>-</td>
+        <td>0,7:1</td>
+        <td>B</td>
+        <td>-</td>
+      </tr>
+      <tr bgcolor="#FFFA5E" >
+        <td><div class="vege"><img src={{url_for('static',filename='img/owoce/wisnia.jpg')}} alt="wiśnia" width="70" height="60"></div></td>
+        <td>Wiśnie (25 gram)</td>
+        <td>16</td>
+        <td>0,27</td>
+        <td>3,21</td>
+        <td>3</td>
+        <td>5</td>
+        <td>1,8</td>
+        <td>1</td>
+        <td>-</td>
+        <td>0,6:1</td>
+        <td>B</td>
+        <td>przed podaniem usuń pestki</td>
+      </tr>
+      <tr bgcolor="#FFFA5E" >
+        <td><div class="vege"><img src={{url_for('static',filename='img/owoce/zurawina.jpg')}} alt="żurawina" width="70" height="60"></div></td>
+        <td>Żurawina (25 gram)</td>
+        <td>12</td>
+        <td>0,10</td>
+        <td>1,0</td>
+        <td>2</td>
+        <td>3</td>
+        <td>3,3</td>
+        <td>3</td>
+        <td>-</td>
+        <td>0,7:1</td>
+        <td>B</td>
+        <td>-</td>
+      </tr>
+      <tr bgcolor="#FF893D" >
+        <td><div class="vege"><img src={{url_for('static',filename='img/owoce/figa.jpg')}} alt="figa" width="70" height="60"></div></td>
+        <td>Figa</td>
+        <td>37</td>
+        <td>0,38</td>
+        <td>8,13</td>
+        <td>18</td>
+        <td>7</td>
+        <td>1</td>
+        <td>4</td>
+        <td>-</td>
+        <td>2,6:1</td>
+        <td>C</td>
+        <td>wysoka zawartość cukru</td>
+      </tr>
+      <tr bgcolor="lightgreen" >
+        <td><div class="vege"><img src={{url_for('static',filename='img/owoce/agrest.jpg')}} alt="agrest" width="70" height="60"></div></td>
+        <td>Agrest (25 gram)</td>
+        <td>11</td>
+        <td>0,22</td>
+        <td>0</td>
+        <td>6</td>
+        <td>7</td>
+        <td>6,9</td>
+        <td>4</td>
+        <td>-</td>
+        <td>0,9:1</td>
+        <td>A</td>
+        <td>-</td>
+      </tr>
+      <tr bgcolor="#FFFA5E" >
+        <td><div class="vege"><img src={{url_for('static',filename='img/owoce/winogrona.jpg')}} alt="winogrona" width="70" height="60"></div></td>
+        <td>Winogrona (25 gram)</td>
+        <td>17</td>
+        <td>0,18</td>
+        <td>3,87</td>
+        <td>2</td>
+        <td>5</td>
+        <td>2,7</td>
+        <td>1</td>
+        <td>-</td>
+        <td>0,4:1</td>
+        <td>B</td>
+        <td>podawać gatunek pozbawiony pestek</td>
+      </tr>
+      <tr bgcolor="#FF893D" >
+        <td><div class="vege"><img src={{url_for('static',filename='img/owoce/kiwi.jpg')}} alt="kiwi" width="70" height="60"></div></td>
+        <td>Kiwi</td>
+        <td>61</td>
+        <td>1,14</td>
+        <td>8,99</td>
+        <td>34</td>
+        <td>34</td>
+        <td>92,7</td>
+        <td>4</td>
+        <td>-</td>
+        <td>1,0:1</td>
+        <td>C</td>
+        <td>-</td>
+      </tr>
+      <tr bgcolor="#FF893D" >
+        <td><div class="vege"><img src={{url_for('static',filename='img/owoce/mango.jpg')}} alt="mango" width="70" height="60"></div></td>
+        <td>Mango</td>
+        <td>65</td>
+        <td>0,51</td>
+        <td>14,80</td>
+        <td>10</td>
+        <td>11</td>
+        <td>27,7</td>
+        <td>38</td>
+        <td>-</td>
+        <td>0,9:1</td>
+        <td>C</td>
+        <td>wysoka zawartość cukru</td>
+      </tr>
+      <tr bgcolor="#FF893D" >
+        <td><div class="vege"><img src={{url_for('static',filename='img/owoce/melon.jpg')}} alt="melon" width="70" height="60"></div></td>
+        <td>Melon</td>
+        <td>34</td>
+        <td>0,84</td>
+        <td>7,86</td>
+        <td>9</td>
+        <td>15</td>
+        <td>36,7</td>
+        <td>169</td>
+        <td>-</td>
+        <td>0,6:1</td>
+        <td>C</td>
+        <td>-</td>
+      </tr>
+      <tr bgcolor="#FF893D" >
+        <td><div class="vege"><img src={{url_for('static',filename='img/owoce/pomarancza.jpg')}} alt="pomarańcza" width="70" height="60"></div></td>
+        <td>Pomarańcza</td>
+        <td>47</td>
+        <td>0,94</td>
+        <td>9,35</td>
+        <td>40</td>
+        <td>14</td>
+        <td>53,2</td>
+        <td>11</td>
+        <td>-</td>
+        <td>2,9:1</td>
+        <td>C</td>
+        <td>-</td>
+      </tr>
+      <tr bgcolor="#FF893D" >
+        <td><div class="vege"><img src={{url_for('static',filename='img/owoce/papaja.jpg')}} alt="papaja" width="70" height="60"></div></td>
+        <td>Papaja</td>
+        <td>39</td>
+        <td>0,61</td>
+        <td>5,90</td>
+        <td>24</td>
+        <td>5</td>
+        <td>61,8</td>
+        <td>55</td>
+        <td>-</td>
+        <td>4,8:1</td>
+        <td>C</td>
+        <td>-</td>
+      </tr>
+      <tr bgcolor="#FF893D" >
+        <td><div class="vege"><img src={{url_for('static',filename='img/owoce/brzoskwinia.jpg')}} alt="brzoskwinia" width="70" height="60"></div></td>
+        <td>Brzoskwinia</td>
+        <td>39</td>
+        <td>0,91</td>
+        <td>8,39</td>
+        <td>6</td>
+        <td>20</td>
+        <td>6,6</td>
+        <td>16</td>
+        <td>-</td>
+        <td>0,3:1</td>
+        <td>C</td>
+        <td>-</td>
+      </tr>
+      <tr bgcolor="#FF893D" >
+        <td><div class="vege"><img src={{url_for('static',filename='img/owoce/gruszka.jpg')}} alt="gruszka" width="70" height="60"></div></td>
+        <td>Gruszka</td>
+        <td>58</td>
+        <td>0,38</td>
+        <td>9,80</td>
+        <td>9</td>
+        <td>11</td>
+        <td>4,2</td>
+        <td>1</td>
+        <td>-</td>
+        <td>0,8:1</td>
+        <td>C</td>
+        <td>-</td>
+      </tr>
+      <tr bgcolor="#FF893D" >
+        <td><div class="vege"><img src={{url_for('static',filename='img/owoce/ananas.jpg')}} alt="ananas" width="70" height="60"></div></td>
+        <td>Ananas</td>
+        <td>48</td>
+        <td>0,54</td>
+        <td>9,26</td>
+        <td>13</td>
+        <td>8</td>
+        <td>36,2</td>
+        <td>3</td>
+        <td>-</td>
+        <td>1,6:1</td>
+        <td>C</td>
+        <td>-</td>
+      </tr>
+      <tr bgcolor="#FF893D" >
+        <td><div class="vege"><img src={{url_for('static',filename='img/owoce/sliwka.jpg')}} alt="śliwka" width="70" height="60"></div></td>
+        <td>Śliwka</td>
+        <td>46</td>
+        <td>0,70</td>
+        <td>9,92</td>
+        <td>6</td>
+        <td>16</td>
+        <td>9,5</td>
+        <td>17</td>
+        <td>-</td>
+        <td>0,3:1</td>
+        <td>C</td>
+        <td>-</td>
+      </tr>
+      <tr bgcolor="lightgreen" >
+        <td><div class="vege"><img src={{url_for('static',filename='img/owoce/malina.jpg')}} alt="malina" width="70" height="60"></div></td>
+        <td>Malina (25 gram)</td>
+        <td>13</td>
+        <td>0,30</td>
+        <td>1,10</td>
+        <td>6</td>
+        <td>7</td>
+        <td>6,5</td>
+        <td>0</td>
+        <td>-</td>
+        <td>0,9:1</td>
+        <td>A</td>
+        <td>-</td>
+      </tr>
+      <tr bgcolor="lightgreen" >
+        <td><div class="vege"><img src={{url_for('static',filename='img/owoce/truskawki.jpg')}} alt="truskawki" width="70" height="60"></div></td>
+        <td>Truskawki   (5 małych)</td>
+        <td>11</td>
+        <td>0,23</td>
+        <td>1,63</td>
+        <td>6</td>
+        <td>8</td>
+        <td>20,6</td>
+        <td>0</td>
+        <td>-</td>
+        <td>0,8:1</td>
+        <td>A</td>
+        <td>-</td>
+      </tr>
+      <tr bgcolor="#FF893D" >
+        <td><div class="vege"><img src={{url_for('static',filename='img/owoce/arbuz.jpg')}} alt="arbuz" width="70" height="60"></div></td>
+        <td>Arbuz</td>
+        <td>30</td>
+        <td>0,61</td>
+        <td>6,20</td>
+        <td>7</td>
+        <td>11</td>
+        <td>8,1</td>
+        <td>28</td>
+        <td>-</td>
+        <td>0,6:1</td>
+        <td>C</td>
+        <td>skórka jest jadalna</td>
+      </tr>
+    </table>
+
+</table> 
+
+{% endblock %}
+
+
