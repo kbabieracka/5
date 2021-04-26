@@ -7,9 +7,14 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route("/home")
+@app.route("/wpis")
 def wpis():
     return render_template("wpis.html")
+
+@app.route("/wpis1")
+def wpis1():
+    return render_template("wpis1.html")
+
 
 
 

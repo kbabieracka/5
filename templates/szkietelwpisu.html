@@ -1,256 +1,42 @@
-<!DOCTYPE HTML>
-<html lang="pl">
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatibile" content="IE=edge,chrome=1" />
-    
-    <title>ŚWINKI MORSKIE</title>
-    <meta name="description" content="Strona internetowa przedstawiająca rodzaje świnek morskich (kawii domowych)" />
-    <meta name="keywords" content="świnka morska, kawia domowa, zwierzątko domowe, zwierzę, przyjaciel, rodzaje, rasy, umaszczenie, kolory" />
-    <meta http-equiv="X-UA-Compatibile" content="IE=edge, chrome=1" />
-    
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css" type="text/css" />
-    <link rel="stylesheet" href="css/fontello.css" type="text/css" />
+{% extends "base.html" %}  
 
-    <script src="sorttable.js"></script>
-    <script src="jquery.js"></script>
-    <script src="jquery-3.5.1.min.js"></script>
-    <script src="jquery.sticky.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src= "jquery.scrollTo.min.js"></script>
 
-    
-    <script>
-        jQuery(function($)
-        {
-            $.scrollTo(0);
+<!-- Zdjęcie dla całego artykułu, wraz z jego źródłem oraz tytuł akrtykułu wyświetlany na zdjęciu-->
 
-            $('#link').click(function() { $.scrollTo($('#'), 500); });
-            $('#link').click(function() { $.scrollTo($('#'), 500); });
-            $('#link').click(function() { $.scrollTo($('#'), 500); });
-            $('#link').click(function() { $.scrollTo($('#'), 500); });
-            $('#link').click(function() { $.scrollTo($('#'), 500); });
-         
+{% block bannersrc %} {{url_for('static',filename='img/.jpg')}} {% endblock %}
+{% block title %} {% endblock %}
 
-        }
-        );
+<!-- (Krótki opis artykułu): Instrukcje pomagające skomponować idealną warzywną dietę dla Twojego prosiaczka. Zapoznaj się z nimi dokładnie i w razie wątpliwości zasięgnij opinii weterynarza, aby Twoje zwierzątko mogło cieszyć
+się zdrowym, długim i szczęśliwym życiem! 
+  --> 
 
-        $(window).scroll(function()
-        {
-            if($(this).scrollTop()>300) $('.scrollup').fadeIn();
-            else $('.scrollup').fadeOut();
-        }
-        );
-    </script>
+{% block opis %}  {% endblock %}
+
+<!-- Pięć tematów/części na które podzielony jest wpis. Tutaj: spis treści -->
+
+{% block pyt1 %} {% endblock %}
+{% block pyt2 %} {% endblock %}
+{% block pyt3 %} {% endblock %}
+{% block pyt4 %} {% endblock %}
+{% block pyt5 %} {% endblock %}
+
+<!-- Zdjęcia ilustrujące poszczególne części wpisu-->
+
+{% block imgsrc1 %} {{url_for('static',filename='img/.jpg')}}{% endblock %}
+{% block imgsrc2 %} {{url_for('static',filename='img/.jpg')}}{% endblock %}
+{% block imgsrc3 %} {{url_for('static',filename='img/.jpg')}}{% endblock %}
+
+<!-- Treść poszczególnych wpisów-->
+
+{% block odp1 %}  {% endblock %}
+{% block odp2 %}  {% endblock %}
+{% block odp3 %}  {% endblock %}
+{% block odp4 %}  {% endblock %}
+{% block odp5 %}  {% endblock %}
+
+
+<!-- Opcjonalna tabelka -->
+{% block table %} {% endblock %}
 
 
 
-</head>
-
-body>
-    <div class="container2">
-        <header>   
-            <div class="banner">
-                <figure>
-                    <a href="#"><img class="banner1" src=img/ width="800" height="300"></a>
-                    <a href="#" class="link1"><p>tytuł</p></a>
-                </figure>
-            </div>
-        </header>    
-    </div>
-
-    
-    <nav>
-        <div class="sticker1">
-            <ol class="wpis">
-                <li><a href="#"> Główna</a></li>
-                <li><a href="#">Żywienie</a>
-                    <ul>
-                        <li><a href="#"> Siano </a></li>
-                        <li><a href="#"> Karma</a></li>
-                        <li><a href="#"> Warzywa</a></li>
-                        <li><a href="#"> Owoce</a></li>
-                    </ul>
-                </li>    
-                <li><a href="#">Pielęgnacja</a>
-                    <ul>
-                        <li><a href="#">Stado</a></li>
-                        <li><a href="#"> Klatka</a></li>
-                        <li><a href="#"> Opieka</a></li>
-                    </ul>
-                </li>    
-                <li><a href="#"> Zdrowie</a>
-                    <ul>
-                        <li><a href="#">Choroby</a></li>
-                        <li><a href="#"> Lekarstwa</a></li>
-                        <li><a href="#"> Alergie</a></li>
-                    </ul>
-                </li>    
-                <li><a href="#"> Inne</a></li>
-                <li><a href="#"> Galeria</a></li>
-            </ol>
-        </div>
-    </nav>
- 
-    
-    <main>
-        <div class="container1">   
-            <article>
-                <header>
-                    <br>
-                    <div class="pytanie1">
-                        <h2>  </h2>
-                    </div>
-                </header>
-                <section>
-
-                    <div class="tresc">
-                        <div class="opis">
-                            Spis treści:
-                            <ol>
-                                <li><a id="link1" href="#"></a> </li>
-                                <li><a id="link1" href="#"></a> </li>
-                                <li><a id="link1" href="#"></a> </li>
-                                <li><a id="link1" href="#"></a> </li>
-                                <li><a id="link1" href="#"></a> </li>
-                             
-                            </ol>
-                        </div>
-                        <div class="imgwpis">
-                            <img src="img/" width="1000" height="300">
-                        </div>
-                        <div class="pytanie" id=>
-                            <h2> Jaka ilość warzyw będzie odpowiednia dla mojej świnki?</h2>
-                        </div>
-                        <div class="opis">
-                            
-                        </div>
-                        <div class="imgwpis">
-                            <img src="img/.jpg" width="1000" height="300">
-                        </div>
-                        <div class="pytanie" id=warzywa2>
-                            <h2> </h2>
-                        </div>
-                        <div class="opis">
-                            
-                        </div>
-                        <div class="imgwpis">
-                            <img src="img/.jpg" width="1000" height="300">
-                        </div>
-                        <div class="pytanie" id=>
-                            <h2></h2>
-                        </div>
-                        <div class="opis">
-                            
-                        </div>
-                        
-                        <div class="pytanie" id=>
-                            <h2> Tabela uwzględniająca składniki odżywcze poszczególnych warzyw.</h2>
-                        </div>
-                        <div class="opis">
-                            <p>Komentarze do tabelki:</p>
-                            <ul>
-                                <li>podane wartości składników odżywczych odnoszą się do 100g produktu (wyjątki są oznaczone)</li>
-                                <li>stosuj produkty o niskiej zawartości wapnia (Ca), który może się nagromadzać powodując kamienie i osad w przewodzie moczowym</li>
-                                <li>stosuj produkty o niskiej zawartości kwasu szczawiowego, który może łączyć się z wapniem tworząc osad złożony z kryształów szczawianu wapnia</li>
-                                <li>staraj się zachować równowagę pomiędzy wapniem i fosforem (Ca:P), utzymując całkowity stosunek pomiędzy 1,5:1 a 2:1</li>
-                                <li>unikaj podawania dużych porcji produktów bogatych w cukier i skrobie</li>
-                                <li>produkty podajemy w stanie surowym</li>
-                                <li>kliknij na nagłówki kolumny aby posortować wartości od najmniejszej do największej</li>
-                                <li>najedź kursorem na obrazek produktu aby powiększyć</li>
-                            </ul>
-                        </div>
-                        <p>Produkty podzielono na następujące grupy:</p>
-                        <table>
-                            <tr>
-                                <th>Nazwa grupy</th>
-                                <th>Częstotliwość podawania</th>
-                            </tr>
-                            <tr bgcolor="lightgreen">
-                                <td style="text-align: center;">A</td>
-                                <td>podawaj codziennie</td>
-                            </tr>
-                            <tr bgcolor="#FFFA5E">
-                                <td style="text-align: center;">B</td>
-                                <td>podawaj często, 2-4 razy na tydzień</td>
-                            </tr>
-                            <tr bgcolor="#FF893D">
-                                <td style="text-align: center;">C</td>
-                                <td>podawaj okazjonalnie. 1-2 razy na tydzień</td>
-                            </tr>
-                            <tr bgcolor="#FF2A2A">
-                                <td style="text-align: center;">D</td>
-                                <td>podawaj rzadko, 1-2 razy na miesiąc</td>
-                            </tr>
-                            
-                        </table>
-
-                    </div>
-
-                    <table class="sortable">
-                        <tr>
-                          <th>Zdjęcie</th>
-                          <th>Warzywo</th>
-                          <th>Kalorie</th>
-                          <th>P<br> (g)</th>
-                          <th>S (g)</th>
-                          <th>Ca (mg)</th>
-                          <th>P (mg)</th>
-                          <th>Wit. C (mg)</th>
-                          <th>Wit. A (mg)</th>
-                          <th>Kwas szczawiowy (mg)</th>
-                          <th>Stosunek Ca:P</th>
-                          <th>Grupa</th>
-                          <th>Komentarz</th>
-                        </tr>
-                        <tr bgcolor="#FFFA5E" >
-                          <td><div class="vege"><img src="img/.jpg" alt="" width="70" height="60"></div></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                        </tr>
-
-        
-                </table>
-                
-                <div class="trescleft">
-                    <div class="pytanieleft" id="">
-                    <h2> </h2>  
-                    </div>
-                </div>
-                <div class="imgleft">
-                    <img src="img/.jpg" width="200" height="250">
-                </div>  
-                <div style="clear:both"></div>              
-            </section>
-        </article>
-    </div>
-</main>
-<footer>
-<div class="footer">DBAJMY O NASZE ŚWINIACZKI
-    <div class="footer1">Wszystkie prawa zastrzeżone, 2020 </div>
-</div>
-</footer>
-
-
-
-</body>
-</html>
-    </main>
-
-
-
-
-</body>
-</html>
